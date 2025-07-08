@@ -6,7 +6,7 @@
   
   "env": {
     "NEXT_PUBLIC_SUPABASE_URL": "https://wgwjxjmbrfeozzmkcing.supabase.co",
-    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "@next_public_supabase_anon_key",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indnd2p4am1icmZlb3p6bWtjaW5nIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE5MDMwNzIsImV4cCI6MjA2NzQ3OTA3Mn0.f_Bpt2joC78gBSLeagp24lAIQlmaqCG8l-C67UYwKL8",
     "SUPABASE_SERVICE_ROLE_KEY": "@supabase_service_role_key"
   }
 }

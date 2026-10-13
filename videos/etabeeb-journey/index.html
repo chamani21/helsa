@@ -1,0 +1,1183 @@
+<!doctype html>
+<html lang="ps">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>eTabeeb — patient journey (Pashto, 9:16)</title>
+    <script src="assets/vendor/gsap.min.js"></script>
+    <style>
+      /* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(assets/fonts/ec84a3760f.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(assets/fonts/4ee8fc9834.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(assets/fonts/f55b8d3974.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(assets/fonts/eef1e49772.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(assets/fonts/983e909462.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(assets/fonts/395290514d.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(assets/fonts/567244088c.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url(assets/fonts/ec84a3760f.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url(assets/fonts/4ee8fc9834.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url(assets/fonts/f55b8d3974.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url(assets/fonts/eef1e49772.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url(assets/fonts/983e909462.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url(assets/fonts/395290514d.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url(assets/fonts/567244088c.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url(assets/fonts/ec84a3760f.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url(assets/fonts/4ee8fc9834.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url(assets/fonts/f55b8d3974.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url(assets/fonts/eef1e49772.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url(assets/fonts/983e909462.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url(assets/fonts/395290514d.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url(assets/fonts/567244088c.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'Noto Naskh Arabic';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(assets/fonts/8f575f28f7.woff2) format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC7, U+10EC9-10EEE, U+10EF0-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* math */
+@font-face {
+  font-family: 'Noto Naskh Arabic';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(assets/fonts/f405c70ce6.woff2) format('woff2');
+  unicode-range: U+0302-0303, U+0305, U+0307-0308, U+0310, U+0312, U+0315, U+031A, U+0326-0327, U+032C, U+032F-0330, U+0332-0333, U+0338, U+033A, U+0346, U+034D, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2016-2017, U+2034-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, U+2074-209F, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;
+}
+/* symbols */
+@font-face {
+  font-family: 'Noto Naskh Arabic';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(assets/fonts/b8c580985a.woff2) format('woff2');
+  unicode-range: U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AE, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8BB, U+1F8C0-1F8C1, U+1F8D0-1F8D8, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FAC6, U+1FAC8, U+1FACC-1FADD, U+1FADF-1FAEB, U+1FAEF-1FAFA, U+1FB00-1FBFF;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Noto Naskh Arabic';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(assets/fonts/f953ba2d6f.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Noto Naskh Arabic';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(assets/fonts/85a64a11ad.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'Noto Naskh Arabic';
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url(assets/fonts/8f575f28f7.woff2) format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC7, U+10EC9-10EEE, U+10EF0-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* math */
+@font-face {
+  font-family: 'Noto Naskh Arabic';
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url(assets/fonts/f405c70ce6.woff2) format('woff2');
+  unicode-range: U+0302-0303, U+0305, U+0307-0308, U+0310, U+0312, U+0315, U+031A, U+0326-0327, U+032C, U+032F-0330, U+0332-0333, U+0338, U+033A, U+0346, U+034D, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2016-2017, U+2034-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, U+2074-209F, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;
+}
+/* symbols */
+@font-face {
+  font-family: 'Noto Naskh Arabic';
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url(assets/fonts/b8c580985a.woff2) format('woff2');
+  unicode-range: U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AE, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8BB, U+1F8C0-1F8C1, U+1F8D0-1F8D8, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FAC6, U+1FAC8, U+1FACC-1FADD, U+1FADF-1FAEB, U+1FAEF-1FAFA, U+1FB00-1FBFF;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Noto Naskh Arabic';
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url(assets/fonts/f953ba2d6f.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Noto Naskh Arabic';
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url(assets/fonts/85a64a11ad.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'Noto Naskh Arabic';
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url(assets/fonts/8f575f28f7.woff2) format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC7, U+10EC9-10EEE, U+10EF0-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* math */
+@font-face {
+  font-family: 'Noto Naskh Arabic';
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url(assets/fonts/f405c70ce6.woff2) format('woff2');
+  unicode-range: U+0302-0303, U+0305, U+0307-0308, U+0310, U+0312, U+0315, U+031A, U+0326-0327, U+032C, U+032F-0330, U+0332-0333, U+0338, U+033A, U+0346, U+034D, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2016-2017, U+2034-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, U+2074-209F, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;
+}
+/* symbols */
+@font-face {
+  font-family: 'Noto Naskh Arabic';
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url(assets/fonts/b8c580985a.woff2) format('woff2');
+  unicode-range: U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AE, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8BB, U+1F8C0-1F8C1, U+1F8D0-1F8D8, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FAC6, U+1FAC8, U+1FACC-1FADD, U+1FADF-1FAEB, U+1FAEF-1FAFA, U+1FB00-1FBFF;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Noto Naskh Arabic';
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url(assets/fonts/f953ba2d6f.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Noto Naskh Arabic';
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url(assets/fonts/85a64a11ad.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(assets/fonts/ec7e2e2562.woff2) format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC7, U+10EC9-10EEE, U+10EF0-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* math */
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(assets/fonts/b295cf466b.woff2) format('woff2');
+  unicode-range: U+0302-0303, U+0305, U+0307-0308, U+0310, U+0312, U+0315, U+031A, U+0326-0327, U+032C, U+032F-0330, U+0332-0333, U+0338, U+033A, U+0346, U+034D, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2016-2017, U+2034-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, U+2074-209F, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;
+}
+/* symbols */
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(assets/fonts/81d3b96669.woff2) format('woff2');
+  unicode-range: U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AE, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8BB, U+1F8C0-1F8C1, U+1F8D0-1F8D8, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FAC6, U+1FAC8, U+1FACC-1FADD, U+1FADF-1FAEB, U+1FAEF-1FAFA, U+1FB00-1FBFF;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(assets/fonts/4392e86ee9.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(assets/fonts/b3c85057ce.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(assets/fonts/ec7e2e2562.woff2) format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC7, U+10EC9-10EEE, U+10EF0-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* math */
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(assets/fonts/b295cf466b.woff2) format('woff2');
+  unicode-range: U+0302-0303, U+0305, U+0307-0308, U+0310, U+0312, U+0315, U+031A, U+0326-0327, U+032C, U+032F-0330, U+0332-0333, U+0338, U+033A, U+0346, U+034D, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2016-2017, U+2034-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, U+2074-209F, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;
+}
+/* symbols */
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(assets/fonts/81d3b96669.woff2) format('woff2');
+  unicode-range: U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AE, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8BB, U+1F8C0-1F8C1, U+1F8D0-1F8D8, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FAC6, U+1FAC8, U+1FACC-1FADD, U+1FADF-1FAEB, U+1FAEF-1FAFA, U+1FB00-1FBFF;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(assets/fonts/4392e86ee9.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(assets/fonts/b3c85057ce.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* arabic */
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(assets/fonts/ec7e2e2562.woff2) format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC7, U+10EC9-10EEE, U+10EF0-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;
+}
+/* math */
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(assets/fonts/b295cf466b.woff2) format('woff2');
+  unicode-range: U+0302-0303, U+0305, U+0307-0308, U+0310, U+0312, U+0315, U+031A, U+0326-0327, U+032C, U+032F-0330, U+0332-0333, U+0338, U+033A, U+0346, U+034D, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2016-2017, U+2034-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, U+2074-209F, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;
+}
+/* symbols */
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(assets/fonts/81d3b96669.woff2) format('woff2');
+  unicode-range: U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AE, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8BB, U+1F8C0-1F8C1, U+1F8D0-1F8D8, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FAC6, U+1FAC8, U+1FACC-1FADD, U+1FADF-1FAEB, U+1FAEF-1FAFA, U+1FB00-1FBFF;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(assets/fonts/4392e86ee9.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Noto Sans Arabic';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(assets/fonts/b3c85057ce.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+    </style>
+    <style>
+      :root {
+        --brand: #0b5a3a;
+        --brand-deep: #073d28;
+        --brand-ink: #004128;
+        --gold: #c7a857;
+        --gold-soft: #d9c58f;
+        --surface: #e8fff0;
+        --paper: #f8faf8;
+        --ink: #0c1f16;
+        --muted: #4d5a52;
+        --wa-head: #0b6b4f;
+        --wa-bg: #efeae2;
+        --wa-out: #d9fdd3;
+        --wa-in: #ffffff;
+        --tick: #34b7f1;
+        --ui: "Noto Sans Arabic", "Inter", sans-serif;
+        --serif: "Noto Naskh Arabic", "Noto Sans Arabic", serif;
+        --latin: "Inter", "Noto Sans Arabic", sans-serif;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0f2a1f; }
+      #root {
+        position: relative; width: 100%; height: 100%; overflow: hidden;
+        font-family: var(--ui); color: var(--ink); background: #0f2a1f;
+      }
+      .clip { position: absolute; inset: 0; }
+      .rtl { direction: rtl; }
+      .ltr { direction: ltr; }
+      .full { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+      /* ---------- Illustrated scenes ---------- */
+      .illus-wrap { position: absolute; inset: 0; overflow: hidden; }
+      .illus { position: absolute; inset: 0; width: 1080px; height: 1920px; transform-origin: 600px 1300px; }
+
+      /* ---------- Phone layer ---------- */
+      #phoneStage { background: radial-gradient(120% 80% at 50% 30%, #e6f4ec 0%, #cfe6d9 55%, #b9d6c6 100%); }
+      .stage-pattern { position: absolute; inset: 0; opacity: 0.35; }
+      #phoneWrap {
+        position: absolute; left: 130px; top: 470px; width: 820px; height: 1760px;
+        transform-origin: 410px 640px;
+      }
+      .phone {
+        position: absolute; inset: 0; border-radius: 96px; background: #15191c;
+        box-shadow: 0 40px 90px rgba(7, 40, 26, 0.35), inset 0 0 0 4px #2c3338;
+      }
+      .screen {
+        position: absolute; left: 20px; top: 20px; right: 20px; bottom: 20px;
+        border-radius: 76px; overflow: hidden; background: var(--wa-bg);
+      }
+      .scr { position: absolute; inset: 0; }
+      .statusbar {
+        position: absolute; left: 0; right: 0; top: 0; height: 60px; padding: 0 64px;
+        display: flex; align-items: center; justify-content: space-between;
+        font-family: var(--latin); font-weight: 600; font-size: 26px; color: #fff; z-index: 5;
+      }
+      .statusbar .icons { display: flex; gap: 12px; align-items: center; }
+      .statusbar.dark { color: #10241b; }
+      .notch { position: absolute; top: 14px; left: 50%; width: 200px; margin-left: -100px; height: 38px; border-radius: 20px; background: #0d1012; z-index: 6; }
+
+      /* WhatsApp-style chat */
+      .wa-head {
+        position: absolute; left: 0; right: 0; top: 0; height: 196px; padding: 68px 34px 0;
+        background: var(--wa-head); color: #fff; display: flex; align-items: center; gap: 20px;
+        direction: rtl;
+      }
+      .wa-back { width: 40px; height: 40px; flex: none; }
+      .avatar-ph {
+        width: 92px; height: 92px; border-radius: 50%; flex: none; border: 3px dashed rgba(255,255,255,0.85);
+        display: flex; align-items: center; justify-content: center; text-align: center;
+        font-size: 24px; line-height: 1.1; font-weight: 600; color: #fff; background: rgba(255,255,255,0.08);
+      }
+      .wa-name { display: flex; flex-direction: column; gap: 2px; }
+      .wa-name b { font-family: var(--latin); font-size: 40px; font-weight: 700; letter-spacing: -0.01em; }
+      .wa-name span { font-size: 26px; opacity: 0.85; }
+      .chat-view { position: absolute; left: 0; right: 0; top: 196px; bottom: 0; overflow: hidden; }
+      .chat-list { position: absolute; left: 0; right: 0; top: 0; padding: 28px 30px 400px; display: flex; flex-direction: column; gap: 22px; direction: rtl; }
+      .day { align-self: center; background: #e1f2fb; color: #3f5560; font-size: 26px; padding: 8px 26px; border-radius: 16px; }
+      .msg {
+        position: relative; max-width: 610px; padding: 18px 28px 14px; border-radius: 26px;
+        font-size: 40px; line-height: 1.6; box-shadow: 0 2px 2px rgba(0,0,0,0.08);
+      }
+      .msg.out { align-self: flex-start; background: var(--wa-out); border-top-right-radius: 26px; border-top-left-radius: 6px; }
+      .msg.in { align-self: flex-end; background: var(--wa-in); border-top-right-radius: 6px; }
+      .meta { display: flex; justify-content: flex-start; align-items: center; gap: 8px; font-family: var(--latin); font-size: 22px; color: #6b7a72; margin-top: 2px; direction: ltr; }
+      .msg.in .meta { justify-content: flex-start; }
+      .ticks { width: 34px; height: 20px; }
+      .slot { position: relative; align-self: flex-end; display: flex; flex-direction: column; align-items: flex-end; }
+      .typing { position: absolute; top: 0; right: 0; background: #fff; border-radius: 26px; border-top-right-radius: 6px; padding: 26px 30px; display: flex; gap: 12px; }
+      .typing i { display: block; width: 16px; height: 16px; border-radius: 50%; background: #9aa7a0; }
+      .link-card { padding: 16px 16px 14px; }
+      .link-inner { background: #f0f5f2; border-radius: 18px; padding: 20px 24px; display: flex; align-items: center; gap: 20px; border-right: 6px solid var(--brand); }
+      .link-ic { width: 76px; height: 76px; border-radius: 18px; background: var(--brand); flex: none; display: flex; align-items: center; justify-content: center; }
+      .link-title { font-size: 38px; font-weight: 700; color: var(--brand-deep); }
+      .link-sub { font-size: 28px; color: var(--muted); }
+      .link-url { font-size: 34px; color: #027eb5; padding: 10px 10px 0; }
+      .img-card { padding: 12px 12px 10px; }
+      .img-thumb { width: 440px; height: 330px; border-radius: 18px; background: #e9efe9; position: relative; overflow: hidden; }
+      .img-cap { font-size: 34px; padding: 8px 12px 0; }
+
+      /* Browser / consultation room */
+      .browser-bar { position: absolute; left: 0; right: 0; top: 0; height: 170px; background: #f3f5f4; padding: 72px 36px 0; display: flex; align-items: center; gap: 16px; direction: rtl; border-bottom: 2px solid #dfe5e1; }
+      .browser-pill { flex: 1; height: 70px; border-radius: 36px; background: #e4e9e6; display: flex; align-items: center; gap: 14px; padding: 0 26px; font-size: 30px; color: #3b4a42; }
+      .lobby-body { position: absolute; left: 0; right: 0; top: 170px; bottom: 0; background: var(--paper); padding: 46px 48px; display: flex; flex-direction: column; align-items: stretch; gap: 30px; direction: rtl; }
+      .lobby-title { font-family: var(--serif); font-size: 54px; font-weight: 700; color: var(--brand-deep); text-align: center; }
+      .doc-card { display: flex; align-items: center; gap: 30px; background: #fff; border-radius: 30px; padding: 26px; box-shadow: 0 6px 20px rgba(7,61,40,0.08); }
+      .doc-thumb { width: 190px; height: 190px; border-radius: 26px; overflow: hidden; flex: none; background: #ddd; }
+      .doc-thumb img, .call-photo img, .end-photo img, .adm-doc img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .doc-meta b { display: block; font-family: var(--serif); font-size: 46px; color: var(--ink); }
+      .doc-meta span { display: block; font-family: var(--latin); font-size: 30px; color: var(--muted); direction: ltr; text-align: right; }
+      .mode-note { font-size: 32px; color: var(--muted); text-align: center; }
+      .modes { display: flex; gap: 26px; }
+      .mode { flex: 1; height: 200px; border-radius: 30px; background: #fff; border: 4px solid #d5e3db; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; font-size: 38px; font-weight: 600; color: var(--brand-deep); position: relative; }
+      .mode .sel { position: absolute; inset: -4px; border-radius: 30px; border: 6px solid var(--brand); opacity: 0; }
+      .join { height: 120px; border-radius: 60px; background: var(--brand); color: #fff; font-size: 44px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 16px; }
+
+      /* Consultation (audio) screen */
+      .call-bg { position: absolute; inset: 0; background: linear-gradient(180deg, #0d4a33 0%, #07301f 100%); }
+      .call-top { position: absolute; top: 84px; left: 0; right: 0; text-align: center; color: #cfe8db; font-size: 30px; direction: rtl; }
+      .call-photo { position: absolute; left: 160px; top: 150px; width: 460px; height: 460px; border-radius: 48px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.35); }
+      .profile-tag { position: absolute; left: 160px; top: 150px; width: 460px; height: 460px; border-radius: 48px; pointer-events: none; }
+      .profile-tag span { position: absolute; right: 16px; bottom: 16px; background: rgba(7,48,31,0.82); color: #e8fff0; font-size: 22px; padding: 6px 16px; border-radius: 14px; }
+      .call-name { position: absolute; top: 636px; left: 0; right: 0; text-align: center; color: #fff; }
+      .call-name b { display: block; font-family: var(--serif); font-size: 54px; line-height: 1.4; }
+      .call-name span { display: block; font-family: var(--latin); font-size: 32px; color: #b9dccb; }
+      .call-status { position: absolute; top: 790px; left: 50%; width: 420px; margin-left: -210px; height: 66px; border-radius: 33px; background: rgba(255,255,255,0.12); color: #e8fff0; display: flex; align-items: center; justify-content: center; gap: 16px; font-size: 32px; direction: rtl; }
+      .bars { display: flex; gap: 6px; align-items: center; height: 34px; }
+      .bars i { display: block; width: 7px; height: 34px; border-radius: 4px; background: var(--gold-soft); transform-origin: 50% 50%; }
+      .connecting { position: absolute; top: 790px; left: 0; right: 0; text-align: center; color: #e8fff0; font-size: 34px; direction: rtl; }
+      .pt-tile { position: absolute; left: 112px; top: 520px; width: 150px; height: 150px; border-radius: 50%; overflow: hidden; border: 6px solid #0d4a33; background: #d8c7a8; }
+      .pt-label { position: absolute; left: 112px; top: 676px; width: 150px; text-align: center; color: #cfe8db; font-size: 26px; }
+      .chips { position: absolute; top: 884px; left: 40px; right: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; direction: rtl; }
+      .chip { height: 112px; border-radius: 28px; background: #f2fbf6; display: flex; align-items: center; gap: 14px; padding: 0 18px; font-size: 30px; white-space: nowrap; font-weight: 600; color: var(--brand-deep); }
+      .chip .ci { width: 70px; height: 70px; border-radius: 20px; background: #dcefe4; display: flex; align-items: center; justify-content: center; flex: none; }
+      .controls { position: absolute; top: 1150px; left: 0; right: 0; display: flex; justify-content: center; gap: 70px; }
+      .ctl { width: 112px; height: 112px; border-radius: 50%; background: rgba(255,255,255,0.14); display: flex; align-items: center; justify-content: center; }
+      .ctl.end { background: #d64545; }
+
+      /* Prescription viewer */
+      .viewer { position: absolute; inset: 0; background: #101413; }
+      .viewer-bar { position: absolute; top: 0; left: 0; right: 0; height: 160px; padding: 70px 40px 0; display: flex; align-items: center; gap: 20px; color: #fff; direction: rtl; font-size: 34px; }
+      .viewer-bar .sub { font-size: 24px; color: #a8b3ad; display: block; }
+      .rx-wrap { position: absolute; left: 40px; right: 40px; top: 186px; height: 1010px; transform-origin: 50% 30%; }
+      .rx { position: absolute; inset: 0; background: #fff; border-radius: 10px; overflow: hidden; direction: rtl; padding: 36px 40px; }
+      .rx-head { display: flex; align-items: center; justify-content: space-between; border-bottom: 4px solid var(--brand); padding-bottom: 18px; }
+      .rx-brand { display: flex; align-items: center; gap: 16px; }
+      .logo-ph-s { width: 96px; height: 96px; border-radius: 16px; border: 3px dashed #7d8b83; display: flex; align-items: center; justify-content: center; font-size: 18px; color: #5c6a62; text-align: center; line-height: 1.1; }
+      .rx-brand b { font-family: var(--serif); font-size: 40px; color: var(--brand-deep); display: block; line-height: 1.3; }
+      .rx-brand span { font-family: var(--latin); font-size: 24px; color: var(--muted); display: block; direction: ltr; text-align: right; }
+      .rx-title { font-family: var(--serif); font-size: 44px; font-weight: 700; color: var(--brand-deep); }
+      .rx-rows { margin-top: 22px; display: flex; flex-direction: column; gap: 12px; font-size: 30px; color: #2f3d35; }
+      .rx-rows div { display: flex; justify-content: space-between; border-bottom: 2px dotted #cfd8d2; padding-bottom: 8px; }
+      .rx-sym { font-family: "Noto Naskh Arabic", serif; margin-top: 26px; font-size: 64px; color: var(--brand); direction: ltr; text-align: left; font-weight: 700; }
+      .rx-lines { margin-top: 10px; display: flex; flex-direction: column; gap: 26px; }
+      .rx-lines i { display: block; height: 22px; border-radius: 11px; background: #e3e9e5; }
+      .rx-foot { position: absolute; left: 40px; right: 40px; bottom: 36px; display: flex; justify-content: space-between; align-items: flex-end; font-size: 26px; color: #4a5750; }
+      .sign { width: 230px; border-top: 3px solid #9aa8a0; padding-top: 8px; text-align: center; }
+      .wm { position: absolute; left: -80px; right: -80px; top: 420px; text-align: center; transform: rotate(-28deg); font-family: var(--serif); font-size: 190px; font-weight: 700; color: rgba(200, 40, 40, 0.16); letter-spacing: 0.04em; }
+      .sample-band { position: absolute; top: 0; left: 0; right: 0; height: 56px; background: #fdecec; color: #a12a2a; font-size: 28px; font-weight: 700; display: flex; align-items: center; justify-content: center; direction: rtl; }
+
+      /* Admin overlay */
+      #admin { background: linear-gradient(160deg, #f6f9f7 0%, #e3efe8 100%); }
+      .adm-title { position: absolute; top: 470px; left: 70px; right: 70px; display: flex; align-items: center; justify-content: space-between; direction: rtl; }
+      .adm-title b { font-family: var(--serif); font-size: 50px; color: var(--brand-deep); }
+      .adm-badge { font-size: 28px; color: #fff; background: var(--brand); border-radius: 18px; padding: 8px 22px; }
+      .adm-card { position: absolute; top: 570px; left: 70px; right: 70px; background: #fff; border-radius: 34px; box-shadow: 0 16px 40px rgba(7,61,40,0.12); padding: 34px 40px; direction: rtl; }
+      .adm-src { display: flex; align-items: center; gap: 16px; font-size: 30px; color: var(--muted); padding-bottom: 20px; border-bottom: 2px solid #e5ece8; }
+      .adm-row { display: flex; align-items: center; justify-content: space-between; padding: 24px 0; border-bottom: 2px solid #eef3f0; font-size: 36px; }
+      .adm-row .k { color: var(--muted); }
+      .adm-row .v { display: flex; align-items: center; gap: 16px; font-weight: 600; }
+      .ok { width: 46px; height: 46px; border-radius: 50%; background: #1f8a5a; display: flex; align-items: center; justify-content: center; flex: none; }
+      .adm-doc { width: 70px; height: 70px; border-radius: 16px; overflow: hidden; flex: none; }
+      .adm-notify { margin-top: 26px; background: #eaf6ef; border-radius: 22px; padding: 22px 26px; display: flex; align-items: center; gap: 18px; font-size: 32px; color: var(--brand-deep); }
+      .adm-note { position: absolute; top: 1530px; left: 70px; right: 70px; text-align: center; font-size: 26px; color: #6a7a71; direction: rtl; }
+
+      /* Captions */
+      .cap-band {
+        position: absolute; top: 196px; bottom: auto; height: auto; left: 56px; right: 56px; min-height: 120px;
+        display: flex; align-items: center; justify-content: center; text-align: center;
+        padding: 22px 38px; border-radius: 30px; background: rgba(7, 48, 31, 0.88);
+        color: #fff; font-family: var(--serif); font-size: 46px; line-height: 1.62; direction: rtl;
+      }
+
+      .sample-tag {
+        position: absolute; top: 412px; right: 70px; height: 46px; padding: 0 20px; border-radius: 23px;
+        background: rgba(255, 255, 255, 0.92); color: #7a2b2b; font-size: 24px; font-weight: 600;
+        display: flex; align-items: center; gap: 10px; direction: rtl; box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      }
+
+      .tap { position: absolute; width: 120px; height: 120px; margin: -60px 0 0 -60px; border-radius: 50%; background: rgba(11, 90, 58, 0.28); border: 4px solid rgba(11, 90, 58, 0.55); opacity: 0; }
+
+      /* End card */
+      #endcard { background: radial-gradient(110% 70% at 50% 35%, #0f6a46 0%, #0b5a3a 45%, #073d28 100%); }
+      .end-logo { position: absolute; top: 470px; left: 50%; width: 300px; height: 300px; margin-left: -150px; border-radius: 40px; border: 5px dashed rgba(255,255,255,0.75); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: #fff; text-align: center; }
+      .end-logo b { font-family: var(--latin); font-size: 30px; letter-spacing: 0.06em; }
+      .end-logo span { font-size: 24px; opacity: 0.85; direction: rtl; line-height: 1.4; padding: 0 20px; }
+      .end-word { position: absolute; top: 800px; left: 0; right: 0; text-align: center; color: #fff; }
+      .end-word b { display: block; font-family: var(--latin); font-size: 84px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
+      .end-word span { display: block; font-family: var(--serif); font-size: 60px; color: var(--gold-soft); line-height: 1.5; }
+      .end-doc { position: absolute; top: 1040px; left: 120px; right: 120px; height: 250px; display: flex; align-items: center; gap: 34px; direction: rtl; background: rgba(255,255,255,0.08); border-radius: 36px; padding: 0 30px; }
+      .end-photo { width: 200px; height: 200px; border-radius: 30px; overflow: hidden; flex: none; border: 4px solid rgba(255,255,255,0.25); }
+      .end-doc b { display: block; font-family: var(--serif); font-size: 50px; color: #fff; line-height: 1.4; }
+      .end-doc span { display: block; font-family: var(--latin); font-size: 32px; color: #b9dccb; direction: ltr; text-align: right; }
+      .end-wa { position: absolute; top: 1330px; left: 50%; width: 520px; margin-left: -260px; height: 104px; border-radius: 52px; background: #fff; color: var(--brand-deep); display: flex; align-items: center; justify-content: center; gap: 18px; font-size: 40px; font-weight: 700; direction: rtl; }
+      .end-disc { position: absolute; top: 1462px; left: 80px; right: 80px; text-align: center; color: #f5e6c4; font-size: 34px; direction: rtl; line-height: 1.5; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1920" data-duration="88">
+
+      <!-- Shared illustration assets (fictional, illustrated patient; not a real person) -->
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#c9dfe4" />
+            <stop offset="0.55" stop-color="#efe1c4" />
+            <stop offset="1" stop-color="#f3dfb8" />
+          </linearGradient>
+          <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#d4bb90" />
+            <stop offset="1" stop-color="#bf9f72" />
+          </linearGradient>
+          <linearGradient id="wall" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#b98d60" />
+            <stop offset="1" stop-color="#cba57a" />
+          </linearGradient>
+          <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+            <stop offset="0" stop-color="#e9fff3" stop-opacity="0.75" />
+            <stop offset="1" stop-color="#e9fff3" stop-opacity="0" />
+          </radialGradient>
+
+          <!-- Patient head (used for the call tile too) -->
+          <symbol id="patientHead" viewBox="-130 40 260 420">
+            <ellipse cx="-88" cy="250" rx="16" ry="28" fill="#b97c58" />
+            <ellipse cx="88" cy="250" rx="16" ry="28" fill="#b97c58" />
+            <ellipse cx="0" cy="238" rx="88" ry="110" fill="#c68d66" />
+            <path d="M-70 270 C-60 300 -30 312 0 312 C30 312 60 300 70 270" fill="#bb7f5b" opacity="0.35" />
+            <!-- brows (grey) -->
+            <path d="M-62 204 C-48 194 -26 192 -12 196" stroke="#cfcac0" stroke-width="9" stroke-linecap="round" fill="none" />
+            <path d="M12 196 C26 192 48 194 62 204" stroke="#cfcac0" stroke-width="9" stroke-linecap="round" fill="none" />
+            <!-- lowered eyes -->
+            <path d="M-54 236 Q-38 226 -22 236" stroke="#3a2a20" stroke-width="6" stroke-linecap="round" fill="none" />
+            <path d="M22 236 Q38 226 54 236" stroke="#3a2a20" stroke-width="6" stroke-linecap="round" fill="none" />
+            <!-- nose -->
+            <path d="M2 232 Q-12 266 -6 280 Q4 288 16 280" stroke="#9c6446" stroke-width="5" stroke-linecap="round" fill="none" />
+            <!-- trimmed grey-white beard -->
+            <path d="M-86 252 C-92 350 -50 432 0 440 C50 432 92 350 86 252 C74 300 44 318 0 320 C-44 318 -74 300 -86 252 Z" fill="#e2ded6" />
+            <path d="M-40 300 C-20 288 20 288 40 300 C22 312 -22 312 -40 300 Z" fill="#d3cec4" />
+            <path d="M-60 360 C-40 380 -20 392 0 396 M60 360 C40 380 20 392 0 396" stroke="#cbc5ba" stroke-width="4" fill="none" />
+            <!-- white turban (lungi) -->
+            <path d="M-104 206 C-118 120 -66 62 0 58 C66 62 118 120 104 206 C66 182 -66 182 -104 206 Z" fill="#f3efe7" />
+            <path d="M-96 170 C-50 150 50 150 96 170 M-86 130 C-40 112 40 112 86 130 M-60 96 C-24 84 24 84 60 96" stroke="#d9d2c4" stroke-width="5" fill="none" stroke-linecap="round" />
+            <path d="M-104 206 C-66 182 66 182 104 206 L104 196 C66 172 -66 172 -104 196 Z" fill="#e3ddd0" />
+          </symbol>
+
+          <!-- Patient, waist-up, holding a phone -->
+          <symbol id="patient" viewBox="-340 40 680 900">
+            <!-- turban tail (shamla) behind shoulder -->
+            <path d="M84 180 C128 240 124 360 108 470 L72 470 C88 360 88 250 66 196 Z" fill="#ece6da" />
+            <!-- body / kameez -->
+            <path d="M-320 940 C-320 600 -230 470 -90 432 L90 432 C230 470 320 600 320 940 Z" fill="#ece2cc" />
+            <!-- waistcoat -->
+            <path d="M-262 940 C-262 650 -200 520 -86 452 L-30 600 L-46 940 Z" fill="#4e583a" />
+            <path d="M262 940 C262 650 200 520 86 452 L30 600 L46 940 Z" fill="#4e583a" />
+            <path d="M-30 600 L-46 940 M30 600 L46 940" stroke="#3d462d" stroke-width="4" />
+            <!-- shawl (patu) over left shoulder -->
+            <path d="M-320 760 C-300 560 -220 470 -110 440 C-150 520 -170 620 -190 940 L-320 940 Z" fill="#8b6c4c" />
+            <path d="M-296 700 C-270 600 -230 540 -170 500" stroke="#7a5d40" stroke-width="5" fill="none" />
+            <!-- neck -->
+            <path d="M-48 330 L48 330 L60 450 L-60 450 Z" fill="#b97c58" />
+            <path d="M-60 440 C-20 470 20 470 60 440" stroke="#d8cdb6" stroke-width="10" fill="none" />
+            <!-- arms bent up to the phone -->
+            <path d="M-210 940 C-200 780 -160 700 -86 660 L-50 720 C-110 760 -140 820 -150 940 Z" fill="#e4d8bf" />
+            <path d="M210 940 C200 780 160 700 86 660 L50 720 C110 760 140 820 150 940 Z" fill="#e4d8bf" />
+            <!-- phone (back faces the viewer) -->
+            <g transform="rotate(-6 0 640)">
+              <rect x="-66" y="540" width="132" height="218" rx="20" fill="#24292d" />
+              <rect x="-50" y="556" width="34" height="34" rx="10" fill="#3a4147" />
+            </g>
+            <!-- hands -->
+            <ellipse cx="-74" cy="672" rx="34" ry="44" fill="#c68d66" />
+            <ellipse cx="74" cy="664" rx="34" ry="44" fill="#c68d66" />
+            <use href="#patientHead" x="-130" y="40" width="260" height="420" />
+          </symbol>
+
+          <!-- Remote home setting -->
+          <symbol id="homeBg" viewBox="0 0 1080 1920">
+            <rect width="1080" height="1920" fill="url(#sky)" />
+            <circle cx="820" cy="610" r="96" fill="#fbe6b2" opacity="0.85" />
+            <path d="M0 980 L120 820 L230 900 L380 720 L520 880 L650 760 L800 900 L930 790 L1080 900 L1080 1100 L0 1100 Z" fill="#b9a891" />
+            <path d="M0 1040 L170 920 L300 990 L470 880 L640 1000 L790 920 L960 1010 L1080 960 L1080 1140 L0 1140 Z" fill="#a8916f" />
+            <rect y="1080" width="1080" height="840" fill="url(#ground)" />
+            <!-- winding dirt road toward the mountains -->
+            <path d="M1080 1920 C860 1700 980 1460 760 1280 C660 1190 620 1140 560 1100 L600 1100 C680 1150 740 1200 820 1280 C1040 1460 960 1700 1080 1780 Z" fill="#e2cfa8" opacity="0.9" />
+            <!-- poplars -->
+            <ellipse cx="930" cy="900" rx="34" ry="190" fill="#7f8f58" />
+            <ellipse cx="990" cy="940" rx="28" ry="160" fill="#6f7f4b" />
+            <rect x="926" y="1060" width="8" height="60" fill="#6a5238" />
+            <rect x="986" y="1080" width="7" height="50" fill="#6a5238" />
+            <!-- mud-brick house -->
+            <path d="M0 880 L540 880 L548 900 L540 1560 L0 1560 Z" fill="url(#wall)" />
+            <path d="M0 872 L552 872 L552 896 L0 896 Z" fill="#a77d52" />
+            <path d="M40 960 L220 960 M300 1010 L500 1010 M60 1180 L200 1180 M380 1240 L520 1240 M100 1400 L260 1400" stroke="#b08458" stroke-width="5" opacity="0.6" />
+            <rect x="80" y="1060" width="190" height="380" rx="8" fill="#6e4a2c" />
+            <rect x="96" y="1076" width="74" height="350" fill="#5f3f25" />
+            <rect x="180" y="1076" width="74" height="350" fill="#5f3f25" />
+            <rect x="350" y="960" width="110" height="90" rx="6" fill="#4b3a2c" />
+            <rect x="350" y="1002" width="110" height="6" fill="#6e4a2c" />
+          </symbol>
+        </defs>
+      </svg>
+
+      <!-- ================= SCENE 1 · remote home (0–7.2) ================= -->
+      <section id="s1" class="clip" data-start="0" data-duration="7.4" data-track-index="1">
+        <div class="illus-wrap" id="s1Fade">
+          <svg class="illus" id="s1Illus" viewBox="0 0 1080 1920">
+            <use href="#homeBg" width="1080" height="1920" />
+            <ellipse cx="640" cy="1400" rx="260" ry="200" fill="url(#glow)" opacity="0.0" id="s1Glow" />
+            <use href="#patient" x="300" y="1000" width="680" height="900" />
+          </svg>
+        </div>
+      </section>
+
+      <!-- ================= PHONE STAGE (7–79) ================= -->
+      <section id="phoneStage" class="clip" data-start="6.8" data-duration="72.6" data-track-index="2">
+        <svg class="stage-pattern" viewBox="0 0 1080 1920" aria-hidden="true">
+          <g fill="none" stroke="#9cc4ae" stroke-width="2">
+            <circle cx="540" cy="1100" r="520" /><circle cx="540" cy="1100" r="700" /><circle cx="540" cy="1100" r="880" />
+          </g>
+        </svg>
+        <div id="phoneWrap">
+          <div class="phone"></div>
+          <div class="screen">
+            <div class="notch"></div>
+
+            <!-- WhatsApp-style chat with the ONE eTabeeb number -->
+            <div class="scr" id="scrChat">
+              <div class="statusbar"><span>۱۰:۲۴</span>
+                <span class="icons">
+                  <svg width="34" height="22" viewBox="0 0 34 22"><rect x="0" y="14" width="6" height="8" rx="1" fill="#fff"/><rect x="9" y="9" width="6" height="13" rx="1" fill="#fff"/><rect x="18" y="4" width="6" height="18" rx="1" fill="#fff"/><rect x="27" y="0" width="6" height="22" rx="1" fill="#fff" opacity="0.45"/></svg>
+                  <svg width="48" height="24" viewBox="0 0 48 24"><rect x="1" y="2" width="40" height="20" rx="5" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="5" y="6" width="26" height="12" rx="2" fill="#fff"/><rect x="43" y="8" width="4" height="8" rx="1.5" fill="#fff"/></svg>
+                </span>
+              </div>
+              <div class="wa-head">
+                <svg class="wa-back" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <div class="avatar-ph">لوګو</div>
+                <div class="wa-name"><b>eTabeeb</b><span>ای طبیب · طبي مشوره</span></div>
+              </div>
+              <div class="chat-view">
+                <div class="chat-list" id="chatList">
+                  <div class="day">نن</div>
+                  <div class="msg out" id="m1">سلام، له ډاکټر سره مشوره غواړم.<div class="meta">۱۰:۲۴ <svg class="ticks" viewBox="0 0 34 20"><path d="M2 10l6 6L20 3M14 14l2 2L30 3" stroke="#34b7f1" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+                                    <div class="slot"><div class="typing" id="t1"><i></i><i></i><i></i></div><div class="msg in" id="m2">مهرباني وکړئ خپل نوم ولیکئ.<div class="meta">۱۰:۲۴</div></div></div>
+                  <div class="msg out" id="m3">عبدالرحمن<div class="meta">۱۰:۲۵ <svg class="ticks" viewBox="0 0 34 20"><path d="M2 10l6 6L20 3M14 14l2 2L30 3" stroke="#34b7f1" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+                                    <div class="slot"><div class="typing" id="t2"><i></i><i></i><i></i></div><div class="msg in" id="m4">مننه. ستاسو د مشورې غوښتنه ثبت شوه.<div class="meta">۱۰:۲۵</div></div></div>
+                  <div class="msg in" id="m5">ستاسو د مشورې وخت تایید شو.<div class="meta">۱۱:۴۰</div></div>
+                  <div class="msg in link-card" id="m6">
+                    <div class="link-inner">
+                      <div class="link-ic"><svg width="44" height="44" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg></div>
+                      <div><div class="link-title">د مشورې لینک</div><div class="link-sub">په ټاکلي وخت یې خلاص کړئ</div></div>
+                    </div>
+                    <div class="meta">۱۱:۴۰</div>
+                  </div>
+                                    <div class="slot"><div class="typing" id="t3"><i></i><i></i><i></i></div><div class="msg in" id="m7">ستاسو نسخه چمتو ده.<div class="meta">۱۲:۱۵</div></div></div>
+                  <div class="msg in img-card" id="m8">
+                    <div class="img-thumb">
+                      <svg width="440" height="330" viewBox="0 0 440 330"><rect width="440" height="330" fill="#e7ede8"/><rect x="110" y="24" width="220" height="300" rx="6" fill="#fff"/><rect x="128" y="42" width="184" height="8" fill="#0b5a3a"/><rect x="128" y="66" width="120" height="10" rx="5" fill="#d3ddd7"/><rect x="128" y="88" width="160" height="10" rx="5" fill="#d3ddd7"/><rect x="128" y="126" width="184" height="10" rx="5" fill="#e3e9e5"/><rect x="128" y="148" width="184" height="10" rx="5" fill="#e3e9e5"/><rect x="128" y="170" width="140" height="10" rx="5" fill="#e3e9e5"/><text x="220" y="250" text-anchor="middle" font-family="Noto Naskh Arabic" font-size="44" font-weight="700" fill="rgba(200,40,40,0.35)" transform="rotate(-24 220 230)">نمونه</text></svg>
+                    </div>
+                    <div class="img-cap">نسخه · انځور (نمونه)</div>
+                    <div class="meta">۱۲:۱۵</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Consultation room opened from the link -->
+            <div class="scr" id="scrLobby" style="opacity:0">
+              <div class="statusbar dark"><span>۱۱:۵۹</span><span class="icons"><svg width="48" height="24" viewBox="0 0 48 24"><rect x="1" y="2" width="40" height="20" rx="5" fill="none" stroke="#10241b" stroke-width="2.5"/><rect x="5" y="6" width="26" height="12" rx="2" fill="#10241b"/></svg></span></div>
+              <div class="browser-bar">
+                <div class="browser-pill"><svg width="26" height="26" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2" fill="#3b4a42"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="#3b4a42" stroke-width="2.2" fill="none"/></svg><span>ای طبیب · د مشورې خونه</span></div>
+              </div>
+              <div class="lobby-body">
+                <div class="lobby-title">د مشورې خونه</div>
+                <div class="doc-card" id="lobbyDoc">
+                  <div class="doc-thumb"><img src="assets/doctor/dr-jalaluddin__headshot-white-coat-01.png" alt="Dr. Jalaluddin" /></div>
+                  <div class="doc-meta"><b>ډاکټر جلال الدین</b><span>Dr. Jalaluddin</span></div>
+                </div>
+                <div class="mode-note" id="modeNote">د خپل انټرنېټ له مخې یو یې وټاکئ</div>
+                <div class="modes" id="modes">
+                  <div class="mode" id="modeAudio"><div class="sel" id="modeAudioSel"></div>
+                    <svg width="64" height="64" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3" fill="#0b5a3a"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4" stroke="#0b5a3a" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+                    <span>غږیزه</span></div>
+                  <div class="mode" id="modeVideo">
+                    <svg width="64" height="64" viewBox="0 0 24 24"><rect x="3" y="6" width="12" height="12" rx="2.5" fill="#0b5a3a"/><path d="M15 10l6-3v10l-6-3z" fill="#0b5a3a"/></svg>
+                    <span>ویډیويي</span></div>
+                </div>
+                <div class="join" id="join">ننوځئ</div>
+              </div>
+            </div>
+
+            <!-- Consultation in progress: doctor's real photo shown as his profile picture -->
+            <div class="scr" id="scrCall" style="opacity:0">
+              <div class="call-bg"></div>
+              <div class="statusbar"><span>۱۲:۰۰</span><span class="icons"><svg width="48" height="24" viewBox="0 0 48 24"><rect x="1" y="2" width="40" height="20" rx="5" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="5" y="6" width="26" height="12" rx="2" fill="#fff"/></svg></span></div>
+              <div class="call-top">ای طبیب · د مشورې خونه</div>
+              <div class="call-photo" id="callPhoto"><img src="assets/doctor/dr-jalaluddin__headshot-white-coat-01.png" alt="Dr. Jalaluddin" /></div>
+              <div class="profile-tag"><span>پروفایل انځور</span></div>
+              <div class="pt-tile" id="ptTile"><svg width="150" height="150" viewBox="-130 70 260 300"><rect x="-130" y="70" width="260" height="300" fill="#d8c7a8"/><use href="#patientHead" x="-130" y="40" width="260" height="420"/></svg></div>
+              <div class="pt-label" id="ptLabel">تاسو</div>
+              <div class="call-name"><b>ډاکټر جلال الدین</b><span>Dr. Jalaluddin</span></div>
+              <div class="connecting" id="connecting">وصلېږي…</div>
+              <div class="call-status" id="callStatus">
+                <div class="bars" id="bars"><i></i><i></i><i></i><i></i><i></i></div>
+                <span>غږیزه مشوره</span>
+              </div>
+              <div class="chips">
+                <div class="chip" id="chip1"><div class="ci"><svg width="40" height="40" viewBox="0 0 24 24"><path d="M10 4a2 2 0 0 1 4 0v9a4 4 0 1 1-4 0z" stroke="#0b5a3a" stroke-width="2" fill="none"/><circle cx="12" cy="16.5" r="2" fill="#c0392b"/></svg></div>نښې</div>
+                <div class="chip" id="chip2"><div class="ci"><svg width="40" height="40" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2" stroke="#0b5a3a" stroke-width="2" fill="none"/><rect x="9" y="2.5" width="6" height="3.5" rx="1" fill="#0b5a3a"/><path d="M8 11h8M8 15h6" stroke="#0b5a3a" stroke-width="2" stroke-linecap="round"/></svg></div>پخوانۍ ناروغۍ</div>
+                <div class="chip" id="chip3"><div class="ci"><svg width="40" height="40" viewBox="0 0 24 24"><g transform="rotate(-40 12 12)"><rect x="3" y="8.5" width="18" height="7" rx="3.5" stroke="#0b5a3a" stroke-width="2" fill="none"/><path d="M12 8.5v7" stroke="#0b5a3a" stroke-width="2"/><rect x="12" y="9.5" width="8" height="5" rx="2.5" fill="#0b5a3a"/></g></svg></div>کارېدونکي درمل</div>
+                <div class="chip" id="chip4"><div class="ci"><svg width="40" height="40" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z" stroke="#0b5a3a" stroke-width="2" fill="none" stroke-linejoin="round"/><path d="M12 17v-6M9.5 13.5L12 11l2.5 2.5" stroke="#0b5a3a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>پخواني راپورونه</div>
+              </div>
+              <div class="controls">
+                <div class="ctl"><svg width="48" height="48" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3" fill="#fff"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
+                <div class="ctl"><svg width="48" height="48" viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z" fill="#fff"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a7.5 7.5 0 0 1 0 11" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
+                <div class="ctl end"><svg width="52" height="52" viewBox="0 0 24 24"><path d="M3 14c5-5 13-5 18 0l-2.5 2.5-3.5-1.5v-2.5c-2-.7-4-.7-6 0V15l-3.5 1.5z" fill="#fff"/></svg></div>
+              </div>
+            </div>
+
+            <!-- Prescription image opened from the same chat -->
+            <div class="scr" id="scrRx" style="opacity:0">
+              <div class="viewer"></div>
+              <div class="statusbar"><span>۱۲:۱۶</span><span class="icons"><svg width="48" height="24" viewBox="0 0 48 24"><rect x="1" y="2" width="40" height="20" rx="5" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="5" y="6" width="26" height="12" rx="2" fill="#fff"/></svg></span></div>
+              <div class="viewer-bar">
+                <svg width="40" height="40" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <div><span style="font-family: var(--latin); font-weight: 700">eTabeeb</span><span class="sub">نسخه · انځور</span></div>
+              </div>
+              <div class="rx-wrap" id="rxWrap">
+                <div class="rx">
+                  <div class="sample-band">نمونه · د ښودنې لپاره · ریښتینې نسخه نه ده</div>
+                  <div class="rx-head" style="margin-top: 56px">
+                    <div class="rx-brand"><div class="logo-ph-s">لوګو</div><div><b>ای طبیب</b><span>eTabeeb</span></div></div>
+                    <div class="rx-title">نسخه</div>
+                  </div>
+                  <div class="rx-rows">
+                    <div><span>ډاکټر: ډاکټر جلال الدین</span><span></span></div>
+                    <div><span>ناروغ: ـــــــــ (نمونه)</span><span>نېټه: ـــــــ</span></div>
+                  </div>
+                  <div class="rx-sym">℞</div>
+                  <div class="rx-lines"><i style="width: 88%"></i><i style="width: 72%"></i><i style="width: 80%"></i><i style="width: 58%"></i><i style="width: 76%"></i><i style="width: 46%"></i></div>
+                  <div class="wm">نمونه</div>
+                  <div class="rx-foot"><span>لارښوونې: ـــــــــــ</span><div class="sign">لاسلیک</div></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- tap feedback -->
+            <div class="tap" id="tapLink" style="left: 390px; top: 1010px"></div>
+            <div class="tap" id="tapAudio" style="left: 550px; top: 820px"></div>
+            <div class="tap" id="tapJoin" style="left: 390px; top: 1010px"></div>
+            <div class="tap" id="tapRx" style="left: 520px; top: 1050px"></div>
+          </div>
+        </div>
+        <div class="sample-tag" id="sampleTag">
+          <svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="#7a2b2b" stroke-width="2.4" fill="none"/><path d="M12 7v6M12 16.5v.5" stroke="#7a2b2b" stroke-width="2.6" stroke-linecap="round"/></svg>
+          د ښودنې لپاره نمونه · خیالي معلومات
+        </div>
+      </section>
+
+      <!-- ================= ADMIN REVIEW (20–27.8) ================= -->
+      <section id="admin" class="clip" data-start="19.8" data-duration="8" data-track-index="3">
+        <div class="adm-title" id="admTitle"><b>د اډمین بیاکتنه</b><span class="adm-badge">اډمین</span></div>
+        <div class="adm-card" id="admCard">
+          <div class="adm-src">
+            <svg width="36" height="36" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" fill="#0b5a3a"/></svg>
+            نوې غوښتنه · له ای طبیب واټساپ څخه
+          </div>
+          <div class="adm-row" id="ar1"><span class="k">نوم</span><span class="v">عبدالرحمن <span class="ok" id="ok1"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></div>
+          <div class="adm-row" id="ar2"><span class="k">عمر</span><span class="v">۵۲ کاله <span class="ok" id="ok2"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></div>
+          <div class="adm-row" id="ar3"><span class="k">ځای</span><span class="v">کندهار <span class="ok" id="ok3"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></div>
+          <div class="adm-row" id="ar4"><span class="k">د فیس ورکړه</span><span class="v">تایید شوه <span class="ok" id="ok4"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></div>
+          <div class="adm-row" id="ar5" style="border-bottom: 0"><span class="k">د مشورې وخت</span><span class="v"><span class="adm-doc"><img src="assets/doctor/dr-jalaluddin__headshot-white-coat-01.png" alt="Dr. Jalaluddin" /></span>له ډاکټر سره برابر شو <span class="ok" id="ok5"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></div>
+          <div class="adm-notify" id="admNotify">
+            <svg width="40" height="40" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z" fill="#0b5a3a"/></svg>
+            ناروغ ته په همدې واټساپ کې خبر ورکول کېږي
+          </div>
+        </div>
+        <div class="adm-note">د اډمین انځوریز لید · ټول معلومات خیالي دي</div>
+      </section>
+
+      <!-- ================= PULL BACK · patient gets the confirmation (31.4–35.2) ================= -->
+      <section id="s4" class="clip" data-start="31.4" data-duration="3.8" data-track-index="4">
+        <div class="illus-wrap" id="s4Fade">
+          <svg class="illus" id="s4Illus" viewBox="0 0 1080 1920">
+            <use href="#homeBg" width="1080" height="1920" />
+            <ellipse cx="640" cy="1500" rx="200" ry="170" fill="url(#glow)" />
+            <use href="#patient" x="300" y="1000" width="680" height="900" />
+            <g id="s4Notif">
+              <rect x="700" y="1160" width="200" height="96" rx="30" fill="#ffffff" />
+              <path d="M760 1256 L742 1286 L790 1256 Z" fill="#ffffff" />
+              <path d="M740 1208 l14 14 l28 -30" stroke="#0b5a3a" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M800 1196 h70 M800 1222 h50" stroke="#9fb3a8" stroke-width="10" stroke-linecap="round" />
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <!-- ================= CALM REVIEW (78.8–82.6) ================= -->
+      <section id="s7" class="clip" data-start="78.8" data-duration="3.8" data-track-index="4">
+        <div class="illus-wrap" id="s7Fade">
+          <svg class="illus" id="s7Illus" viewBox="0 0 1080 1920">
+            <use href="#homeBg" width="1080" height="1920" />
+            <ellipse cx="640" cy="1520" rx="230" ry="190" fill="url(#glow)" />
+            <use href="#patient" x="300" y="1000" width="680" height="900" />
+          </svg>
+        </div>
+      </section>
+
+      <!-- ================= END CARD (82–88) ================= -->
+      <section id="endcard" class="clip" data-start="82" data-duration="6" data-track-index="5">
+        <div class="end-logo" id="endLogo"><b>LOGO</b><span>د ای طبیب رسمي لوګو دلته · placeholder</span></div>
+        <div class="end-word" id="endWord"><b>eTabeeb</b><span>ای طبیب</span></div>
+        <div class="end-doc" id="endDoc">
+          <div class="end-photo"><img src="assets/doctor/dr-jalaluddin__headshot-white-coat-01.png" alt="Dr. Jalaluddin" /></div>
+          <div><b>ډاکټر جلال الدین</b><span>Dr. Jalaluddin</span></div>
+        </div>
+        <div class="end-wa" id="endWa">
+          <svg width="52" height="52" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="#0b5a3a"/><path d="M8.5 11.5h7M8.5 8.5h5" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>
+          په واټساپ پیغام راولېږئ
+        </div>
+        <div class="end-disc" id="endDisc">دا خدمت د بیړنیو حالاتو لپاره نه دی.</div>
+      </section>
+
+      <!-- ================= CAPTIONS (= narration script, Pashto) ================= -->
+      <div id="c1" class="clip cap-band" data-start="0.6" data-duration="6" data-track-index="9">ډاکټر ته تګ درته ګران دی؟ له ای‌طبیب سره له خپل ځایه طبي مشوره ترلاسه کولی شئ.</div>
+      <div id="c2" class="clip cap-band" data-start="7.8" data-duration="5.6" data-track-index="9">په واټساپ کې ای‌طبیب ته پیغام واستوئ او خپل نوم ولیکئ.</div>
+      <div id="c3" class="clip cap-band" data-start="13.6" data-duration="5.8" data-track-index="9">ستاسو د مشورې غوښتنه ثبتېږي.</div>
+      <div id="c4" class="clip cap-band" data-start="20.4" data-duration="5" data-track-index="9">اډمین ستاسو معلومات او د فیس ورکړه تاییدوي.</div>
+      <div id="c5" class="clip cap-band" data-start="25.6" data-duration="8" data-track-index="9">بیا د مشورې وخت له ډاکټر سره برابرېږي او تاسو ته په همدې واټساپ کې خبر درکول کېږي.</div>
+      <div id="c6" class="clip cap-band" data-start="35.4" data-duration="5.2" data-track-index="9">په ټاکلي وخت د مشورې لینک خلاص کړئ.</div>
+      <div id="c7" class="clip cap-band" data-start="40.8" data-duration="6.6" data-track-index="9">د انټرنېټ او موجودو امکاناتو له مخې، له ډاکټر سره غږیزه یا ویډیويي مشوره وکړئ.</div>
+      <div id="c8" class="clip cap-band" data-start="49.2" data-duration="7.4" data-track-index="9">خپلې نښې، پخوانۍ ناروغۍ او کارېدونکي درمل له ډاکټر سره شریک کړئ.</div>
+      <div id="c9" class="clip cap-band" data-start="57" data-duration="6.3" data-track-index="9">که پخواني راپورونه لرئ، هغه هم ورولېږئ.</div>
+      <div id="c10" class="clip cap-band" data-start="66" data-duration="6.6" data-track-index="9">له مشورې وروسته، ډاکټر نسخه او لازمې لارښوونې چمتو کوي</div>
+      <div id="c11" class="clip cap-band" data-start="72.8" data-duration="5.8" data-track-index="9">او په همدې واټساپ کې یې ترلاسه کوئ.</div>
+      <div id="c12" class="clip cap-band" data-start="80.2" data-duration="7.6" data-track-index="9">د مشورې لپاره ای‌طبیب ته په واټساپ کې پیغام واستوئ.</div>
+
+      <!-- ================= AUDIO (music bed + restrained SFX; narration slots documented in NARRATION.md) ================= -->
+      <audio id="aPad" src="assets/audio/pad.wav" data-start="0" data-duration="88" data-track-index="20" data-volume="1"></audio>
+      <audio id="aWind1" src="assets/audio/wind.wav" data-start="0" data-duration="7.6" data-track-index="21" data-volume="0.8"></audio>
+      <audio id="aWind2" src="assets/audio/wind.wav" data-start="31.2" data-duration="4" data-track-index="21" data-volume="0.6"></audio>
+      <audio id="aWind3" src="assets/audio/wind.wav" data-start="78.6" data-duration="4" data-track-index="21" data-volume="0.6"></audio>
+      <audio id="sSend1" src="assets/audio/send.wav" data-start="8.6" data-duration="0.28" data-track-index="22" data-volume="1"></audio>
+      <audio id="sPop1" src="assets/audio/pop.wav" data-start="11.4" data-duration="0.19" data-track-index="22" data-volume="1"></audio>
+      <audio id="sSend2" src="assets/audio/send.wav" data-start="13.6" data-duration="0.28" data-track-index="22" data-volume="1"></audio>
+      <audio id="sPop2" src="assets/audio/pop.wav" data-start="16" data-duration="0.19" data-track-index="22" data-volume="1"></audio>
+      <audio id="sTapA1" src="assets/audio/tap.wav" data-start="21.6" data-duration="0.03" data-track-index="22" data-volume="0.7"></audio>
+      <audio id="sTapA2" src="assets/audio/tap.wav" data-start="24.4" data-duration="0.03" data-track-index="22" data-volume="0.7"></audio>
+      <audio id="sTapA3" src="assets/audio/tap.wav" data-start="25.6" data-duration="0.03" data-track-index="22" data-volume="0.7"></audio>
+      <audio id="sPop3" src="assets/audio/pop.wav" data-start="28.6" data-duration="0.19" data-track-index="22" data-volume="1"></audio>
+      <audio id="sPop4" src="assets/audio/pop.wav" data-start="29.8" data-duration="0.19" data-track-index="22" data-volume="1"></audio>
+      <audio id="sTap1" src="assets/audio/tap.wav" data-start="36.2" data-duration="0.03" data-track-index="22" data-volume="1"></audio>
+      <audio id="sTap2" src="assets/audio/tap.wav" data-start="42.6" data-duration="0.03" data-track-index="22" data-volume="1"></audio>
+      <audio id="sTap3" src="assets/audio/tap.wav" data-start="46.4" data-duration="0.03" data-track-index="22" data-volume="1"></audio>
+      <audio id="sChime" src="assets/audio/chime.wav" data-start="48" data-duration="0.88" data-track-index="22" data-volume="1"></audio>
+      <audio id="sPop5" src="assets/audio/pop.wav" data-start="67.6" data-duration="0.19" data-track-index="22" data-volume="1"></audio>
+      <audio id="sPop6" src="assets/audio/pop.wav" data-start="68.8" data-duration="0.19" data-track-index="22" data-volume="1"></audio>
+      <audio id="sTap4" src="assets/audio/tap.wav" data-start="70.4" data-duration="0.03" data-track-index="22" data-volume="1"></audio>
+    </div>
+
+    <script>
+      document.fonts.ready.then(() => {
+        const tl = gsap.timeline({ paused: true });
+        const E = "power2.out";
+
+        /* ---- Scene 1: fade in + gentle push-in ---- */
+        tl.fromTo("#s1Fade", { opacity: 0 }, { opacity: 1, duration: 0.8, ease: "sine.out" }, 0);
+        tl.fromTo("#s1Illus", { scale: 1 }, { scale: 1.1, duration: 7.4, ease: "sine.inOut" }, 0);
+        tl.to("#s1Fade", { opacity: 0, duration: 0.6, ease: "sine.in" }, 6.8);
+
+        /* ---- Phone stage enters ---- */
+        tl.fromTo("#phoneWrap", { opacity: 0, y: 60, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.9, ease: E }, 6.8);
+        tl.fromTo("#sampleTag", { opacity: 0 }, { opacity: 1, duration: 0.5 }, 7.6);
+        // gentle zoom toward the phone during booking
+        tl.to("#phoneWrap", { scale: 1.04, duration: 11.5, ease: "sine.inOut" }, 7.8);
+
+        const msgIn = (sel, t) => tl.fromTo(sel, { opacity: 0, y: 26, scale: 0.97 }, { opacity: 1, y: 0, scale: 1, duration: 0.42, ease: "back.out(1.4)" }, t);
+        const typing = (sel, t0, t1) => {
+          tl.fromTo(sel, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.25, ease: E }, t0);
+          tl.fromTo(sel + " i", { y: 0 }, { y: -8, duration: 0.25, stagger: 0.12, yoyo: true, repeat: Math.max(0, Math.floor((t1 - t0 - 0.5) / 0.5) - 1), ease: "sine.inOut" }, t0 + 0.1);
+          tl.to(sel, { opacity: 0, duration: 0.15 }, t1 - 0.15);
+        };
+        gsap.set(["#t1", "#t2", "#t3"], { opacity: 0 });
+        gsap.set(["#m1", "#m2", "#m3", "#m4", "#m5", "#m6", "#m7", "#m8"], { opacity: 0 });
+
+        msgIn("#m1", 8.6);
+        typing("#t1", 9.8, 11.4);
+        msgIn("#m2", 11.4);
+        msgIn("#m3", 13.6);
+        typing("#t2", 14.6, 16.0);
+        msgIn("#m4", 16.0);
+
+        /* ---- Admin review overlay ---- */
+        tl.fromTo("#admin", { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "sine.out" }, 19.8);
+        tl.fromTo("#admTitle", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, 20.2);
+        tl.fromTo("#admCard", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 20.5);
+        [["#ar1", 21.0], ["#ar2", 21.5], ["#ar3", 22.0], ["#ar4", 23.6], ["#ar5", 25.0]].forEach(([s, t]) =>
+          tl.fromTo(s, { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.4, ease: E }, t));
+        [["#ok1", 21.6], ["#ok2", 22.1], ["#ok3", 22.6], ["#ok4", 24.4], ["#ok5", 25.6]].forEach(([s, t]) =>
+          tl.fromTo(s, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }, t));
+        tl.fromTo("#admNotify", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, 26.3);
+        tl.to("#admin", { opacity: 0, duration: 0.5, ease: "sine.in" }, 27.3);
+
+        /* ---- Chat scroll 1 (hidden under admin overlay end) + confirmation ---- */
+        const list = document.getElementById("chatList");
+        const yOf = (id) => { const el = document.getElementById(id); return (el.parentElement.classList.contains("slot") ? el.parentElement : el).offsetTop - 28; };
+        const scroll1 = -yOf("m3");
+        tl.to("#phoneWrap", { scale: 1.0, duration: 0.01 }, 27.2);
+        tl.to("#chatList", { y: scroll1, duration: 0.8, ease: "power2.inOut" }, 27.6);
+        msgIn("#m5", 28.6);
+        msgIn("#m6", 29.8);
+
+        /* ---- Pull back: patient receives it ---- */
+        tl.fromTo("#s4Fade", { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "sine.out" }, 31.4);
+        tl.fromTo("#s4Illus", { scale: 1.12 }, { scale: 1.06, duration: 3.8, ease: "sine.inOut" }, 31.4);
+        tl.fromTo("#s4Notif", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: E }, 32.2);
+        tl.to("#s4Fade", { opacity: 0, duration: 0.5, ease: "sine.in" }, 34.7);
+
+        /* ---- Open the link → consultation room ---- */
+        const tap = (sel, t) => tl.fromTo(sel, { opacity: 0.9, scale: 0.4 }, { opacity: 0, scale: 1.4, duration: 0.55, ease: "power1.out", immediateRender: false }, t);
+        tap("#tapLink", 36.2);
+        tl.to("#m6 .link-inner", { backgroundColor: "#d9efe3", duration: 0.2 }, 36.2);
+        tl.fromTo("#scrLobby", { opacity: 0, x: 120 }, { opacity: 1, x: 0, duration: 0.6, ease: E }, 36.7);
+        tl.fromTo(["#lobbyDoc", "#modeNote", "#modes", "#join"], { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.35, ease: E }, 37.4);
+        tap("#tapAudio", 42.6);
+        tl.fromTo("#modeAudioSel", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 42.7);
+        tl.to("#modeAudio", { backgroundColor: "#e6f4ec", duration: 0.25 }, 42.7);
+        tap("#tapJoin", 46.4);
+        tl.to("#join", { scale: 0.96, duration: 0.12, yoyo: true, repeat: 1 }, 46.4);
+
+        /* ---- Push in: connection with the doctor ---- */
+        tl.to("#phoneWrap", { scale: 1.06, duration: 2.6, ease: "sine.inOut" }, 46.6);
+        tl.fromTo("#scrCall", { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "sine.out" }, 47.2);
+        tl.fromTo("#callPhoto", { opacity: 0, scale: 0.94 }, { opacity: 1, scale: 1, duration: 0.7, ease: E }, 47.4);
+        tl.fromTo("#connecting", { opacity: 1 }, { opacity: 0, duration: 0.3 }, 48.2);
+        tl.fromTo("#callStatus", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 48.4);
+        tl.fromTo(["#ptTile", "#ptLabel"], { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.6)" }, 48.6);
+        // audio level bars (sound only; the photo itself never moves)
+        tl.fromTo("#bars i", { scaleY: 0.3 }, { scaleY: 1, duration: 0.32, stagger: { each: 0.09, from: "center" }, yoyo: true, repeat: 44, ease: "sine.inOut" }, 48.6);
+        [["#chip1", 50.6], ["#chip2", 52.4], ["#chip3", 54.2], ["#chip4", 58.0]].forEach(([s, t]) =>
+          tl.fromTo(s, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.45, ease: "back.out(1.5)" }, t));
+
+        /* ---- Back to the same chat: prescription arrives ---- */
+        tl.to("#phoneWrap", { scale: 1.0, duration: 1.2, ease: "sine.inOut" }, 64.2);
+        tl.to("#scrCall", { opacity: 0, duration: 0.6, ease: "sine.in" }, 64.6);
+        const scroll2 = -yOf("m6");
+        tl.to("#chatList", { y: scroll2, duration: 0.9, ease: "power2.inOut" }, 65.4);
+        typing("#t3", 66.4, 67.6);
+        msgIn("#m7", 67.6);
+        msgIn("#m8", 68.8);
+        tap("#tapRx", 70.4);
+        tl.fromTo("#scrRx", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 70.7);
+        tl.fromTo("#rxWrap", { scale: 0.55, y: 160 }, { scale: 1, y: 0, duration: 0.6, ease: E }, 70.7);
+        tl.to("#rxWrap", { scale: 1.04, duration: 7.4, ease: "sine.inOut" }, 71.4);
+
+        /* ---- Calm review + end card ---- */
+        tl.fromTo("#s7Fade", { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "sine.out" }, 78.8);
+        tl.fromTo("#s7Illus", { scale: 1.08 }, { scale: 1.12, duration: 3.8, ease: "sine.inOut" }, 78.8);
+        tl.fromTo("#endcard", { opacity: 0 }, { opacity: 1, duration: 0.7, ease: "sine.out" }, 82);
+        tl.fromTo("#endLogo", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.6, ease: E }, 82.4);
+        tl.fromTo("#endWord", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 82.8);
+        tl.fromTo("#endDoc", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 83.3);
+        tl.fromTo("#endWa", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 83.8);
+        tl.fromTo("#endDisc", { opacity: 0 }, { opacity: 1, duration: 0.6 }, 84.6);
+
+        /* ---- Hide layers that are fully covered (keeps the layout/contrast audit honest) ---- */
+        tl.to("#phoneWrap", { opacity: 0, duration: 0.01 }, 20.45);
+        tl.to("#phoneWrap", { opacity: 1, duration: 0.01 }, 27.2);
+        tl.to("#phoneWrap", { opacity: 0, duration: 0.01 }, 32.05);
+        tl.to("#phoneWrap", { opacity: 1, duration: 0.01 }, 34.65);
+        tl.to("#scrChat", { opacity: 0, duration: 0.01 }, 37.35);
+        tl.to("#scrLobby", { opacity: 0, duration: 0.01 }, 47.85);
+        tl.to("#scrChat", { opacity: 1, duration: 0.01 }, 64.55);
+        tl.to("#scrChat", { opacity: 0, duration: 0.01 }, 71.15);
+        // messages scrolled above the header fade away
+        tl.to(["#chatList .day", "#m1", "#m2"], { opacity: 0, duration: 0.4 }, 27.6);
+        tl.to(["#m3", "#m4", "#m5"], { opacity: 0, duration: 0.4 }, 65.4);
+
+        /* ---- Captions: soft fade in/out ---- */
+        document.querySelectorAll(".cap-band").forEach((band) => {
+          const s = parseFloat(band.dataset.start), d = parseFloat(band.dataset.duration);
+          tl.fromTo(band, { opacity: 0 }, { opacity: 1, duration: 0.3, ease: E }, s);
+          tl.to(band, { opacity: 0, duration: 0.25 }, s + d - 0.25);
+        });
+
+        window.__timelines["main"] = tl;
+      });
+    </script>
+  </body>
+</html>

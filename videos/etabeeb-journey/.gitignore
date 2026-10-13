@@ -1,0 +1,7 @@
+.hyperframes/
+snaps/
+snaps2/
+snaps3/
+renders/draft.mp4
+renders/*.log
+renders/.hf-segments/

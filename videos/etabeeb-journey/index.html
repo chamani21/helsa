@@ -614,7 +614,7 @@
       .call-name { position: absolute; top: 636px; left: 0; right: 0; text-align: center; color: #fff; }
       .call-name b { display: block; font-family: var(--serif); font-size: 54px; line-height: 1.4; }
       .call-name span { display: block; font-family: var(--latin); font-size: 32px; color: #b9dccb; }
-      .call-status { position: absolute; top: 790px; left: 50%; width: 420px; margin-left: -210px; height: 66px; border-radius: 33px; background: rgba(255,255,255,0.12); color: #e8fff0; display: flex; align-items: center; justify-content: center; gap: 16px; font-size: 32px; direction: rtl; }
+      .call-status { position: absolute; top: 790px; left: 50%; width: 480px; margin-left: -240px; height: 66px; border-radius: 33px; background: rgba(255,255,255,0.12); color: #e8fff0; display: flex; align-items: center; justify-content: center; gap: 16px; font-size: 32px; direction: rtl; }
       .bars { display: flex; gap: 6px; align-items: center; height: 34px; }
       .bars i { display: block; width: 7px; height: 34px; border-radius: 4px; background: var(--gold-soft); transform-origin: 50% 50%; }
       .connecting { position: absolute; top: 790px; left: 0; right: 0; text-align: center; color: #e8fff0; font-size: 34px; direction: rtl; }
@@ -623,7 +623,7 @@
       .chips { position: absolute; top: 884px; left: 40px; right: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; direction: rtl; }
       .chip { height: 112px; border-radius: 28px; background: #f2fbf6; display: flex; align-items: center; gap: 14px; padding: 0 18px; font-size: 30px; white-space: nowrap; font-weight: 600; color: var(--brand-deep); }
       .chip .ci { width: 70px; height: 70px; border-radius: 20px; background: #dcefe4; display: flex; align-items: center; justify-content: center; flex: none; }
-      .controls { position: absolute; top: 1150px; left: 0; right: 0; display: flex; justify-content: center; gap: 70px; }
+      .controls { position: absolute; top: 1150px; left: 0; right: 0; display: flex; justify-content: center; gap: 46px; }
       .ctl { width: 112px; height: 112px; border-radius: 50%; background: rgba(255,255,255,0.14); display: flex; align-items: center; justify-content: center; }
       .ctl.end { background: #d64545; }
 
@@ -796,10 +796,10 @@
                 </div>
                 <div class="mode-note" id="modeNote">د خپل انټرنېټ له مخې یو یې وټاکئ</div>
                 <div class="modes" id="modes">
-                  <div class="mode" id="modeAudio"><div class="sel" id="modeAudioSel"></div>
+                  <div class="mode" id="modeAudio">
                     <svg width="64" height="64" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3" fill="#0b5a3a"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4" stroke="#0b5a3a" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
                     <span>غږیزه</span></div>
-                  <div class="mode" id="modeVideo">
+                  <div class="mode" id="modeVideo"><div class="sel" id="modeVideoSel"></div>
                     <svg width="64" height="64" viewBox="0 0 24 24"><rect x="3" y="6" width="12" height="12" rx="2.5" fill="#0b5a3a"/><path d="M15 10l6-3v10l-6-3z" fill="#0b5a3a"/></svg>
                     <span>ویډیويي</span></div>
                 </div>
@@ -820,7 +820,7 @@
               <div class="connecting" id="connecting">وصلېږي…</div>
               <div class="call-status" id="callStatus">
                 <div class="bars" id="bars"><i></i><i></i><i></i><i></i><i></i></div>
-                <span>غږیزه مشوره</span>
+                <svg width="36" height="36" viewBox="0 0 24 24"><rect x="3" y="6" width="12" height="12" rx="2.5" fill="#d9c58f"/><path d="M15 10l6-3v10l-6-3z" fill="#d9c58f"/></svg><span>ویډیويي مشوره</span>
               </div>
               <div class="chips">
                 <div class="chip" id="chip1"><div class="ci"><svg width="40" height="40" viewBox="0 0 24 24"><path d="M10 4a2 2 0 0 1 4 0v9a4 4 0 1 1-4 0z" stroke="#0b5a3a" stroke-width="2" fill="none"/><circle cx="12" cy="16.5" r="2" fill="#c0392b"/></svg></div>نښې</div>
@@ -830,6 +830,7 @@
               </div>
               <div class="controls">
                 <div class="ctl"><svg width="48" height="48" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3" fill="#fff"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
+                <div class="ctl"><svg width="48" height="48" viewBox="0 0 24 24"><rect x="3" y="6" width="12" height="12" rx="2.5" fill="#fff"/><path d="M15 10l6-3v10l-6-3z" fill="#fff"/></svg></div>
                 <div class="ctl"><svg width="48" height="48" viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z" fill="#fff"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a7.5 7.5 0 0 1 0 11" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div>
                 <div class="ctl end"><svg width="52" height="52" viewBox="0 0 24 24"><path d="M3 14c5-5 13-5 18 0l-2.5 2.5-3.5-1.5v-2.5c-2-.7-4-.7-6 0V15l-3.5 1.5z" fill="#fff"/></svg></div>
               </div>
@@ -864,7 +865,7 @@
 
             <!-- tap feedback -->
             <div class="tap" id="tapLink" style="left: 390px; top: 1010px"></div>
-            <div class="tap" id="tapAudio" style="left: 550px; top: 820px"></div>
+            <div class="tap" id="tapVideo" style="left: 230px; top: 820px"></div>
             <div class="tap" id="tapJoin" style="left: 390px; top: 1010px"></div>
             <div class="tap" id="tapRx" style="left: 520px; top: 1050px"></div>
           </div>
@@ -1027,9 +1028,9 @@
         tl.to("#m6 .link-inner", { backgroundColor: "#d9efe3", duration: 0.2 }, 36.2);
         tl.fromTo("#scrLobby", { opacity: 0, x: 120 }, { opacity: 1, x: 0, duration: 0.6, ease: E }, 36.7);
         tl.fromTo(["#lobbyDoc", "#modeNote", "#modes", "#join"], { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.35, ease: E }, 37.4);
-        tap("#tapAudio", 42.6);
-        tl.fromTo("#modeAudioSel", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 42.7);
-        tl.to("#modeAudio", { backgroundColor: "#e6f4ec", duration: 0.25 }, 42.7);
+        tap("#tapVideo", 42.6);
+        tl.fromTo("#modeVideoSel", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 42.7);
+        tl.to("#modeVideo", { backgroundColor: "#e6f4ec", duration: 0.25 }, 42.7);
         tap("#tapJoin", 46.4);
         tl.to("#join", { scale: 0.96, duration: 0.12, yoyo: true, repeat: 1 }, 46.4);
 

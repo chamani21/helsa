@@ -5,3 +5,5 @@ snaps3/
 renders/draft.mp4
 renders/*.log
 renders/.hf-segments/
+renders/work-*/
+renders/.*hf-transaction*/

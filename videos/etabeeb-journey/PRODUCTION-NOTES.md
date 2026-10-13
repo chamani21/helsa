@@ -16,7 +16,7 @@ Built with HyperFrames 0.8.153 (`index.html`). The draft cut was made with the s
 | 46.6 – 64.6 | Speaking with the doctor (key scene) | Dr. Jalaluddin's supplied photo, unmodified, shown as his **profile picture** in an audio-consultation interface. It carries the label «پروفایل انځور». The illustrated patient appears in a small «تاسو» tile. Chips: نښې, پخوانۍ ناروغۍ, کارېدونکي درمل, پخواني راپورونه. | Push-in 1.0 → 1.06. Connect chime. Only the level bars move; the photo itself never animates. |
 | 64.6 – 79.4 | Prescription | Back to the same chat: «ستاسو نسخه چمتو ده.» plus an **image** attachment «نسخه · انځور (نمونه)». A tap opens the image viewer with a sample prescription: «نمونه» banner and watermark, no patient data, no medicines or doses. | Hold about 8 s with a slow 1.0 → 1.04 push. |
 | 78.8 – 82.6 | Calm review | Same patient, calm, looking at his phone. No claims of recovery. | Soft drift. |
-| 82 – 88 | End card | Logo placeholder, «eTabeeb / ای طبیب», Dr. Jalaluddin's photo and name, «په واټساپ پیغام راولېږئ», «دا خدمت د بیړنیو حالاتو لپاره نه دی.» **No phone number or URL is shown** because none is verified for eTabeeb. | Staggered fade-up. Pad fades out. |
+| 82 – 88 | End card | Official eTabeeb logo (full lockup on a white card), Dr. Jalaluddin's photo and name, «په واټساپ پیغام راولېږئ», «دا خدمت د بیړنیو حالاتو لپاره نه دی.» **No phone number or URL is shown** because none is verified for eTabeeb. | Staggered fade-up. Pad fades out. |
 
 Captions sit in a fixed top band (y 196–about 420 px), clear of the bottom platform controls. The persistent tag «د ښودنې لپاره نمونه · خیالي معلومات» marks every mock-up as an illustrative demonstration.
 
@@ -29,6 +29,7 @@ Captions sit in a fixed top band (y 196–about 420 px), clear of the bottom pla
 | Fonts: Noto Naskh Arabic, Noto Sans Arabic, Inter (`assets/fonts/`) | Google Fonts, OFL. Downloaded and embedded locally. | Captions, UI, Latin text | The live eTabeeb site uses the same families (from the repo audit doc). |
 | `assets/vendor/gsap.min.js` | npm `gsap@3.14.2` | Animation runtime | Stored locally because the CDN is blocked in this environment. |
 | `assets/audio/pad.wav`, `wind.wav`, `pop.wav`, `send.wav`, `tap.wav`, `chime.wav` | Generated with FFmpeg (sine/noise synthesis) | Music bed and SFX | Original, so no licensing issues. |
+| `assets/brand/etabeeb-logo-official.png` | Supplied by the user in this session (1254 × 1254, MD5 `a2a792c15700b3c6cd72c76b591b70d0`) | Chat avatar and prescription header (CSS display crop of the emblem only), end card (full lockup) | Byte-identical copy. Never recoloured or redrawn. Its opaque white background is shown on white cards. The end card uses the logo palette (teal `#1aa3a6`, navy `#173f7a`/`#1d5aa0`, gold). |
 | Brand colours | `apps/web/tailwind.config.ts` (Stitch tokens): `#0b5a3a`, `#073d28`, `#004128`, gold `#c7a857` / `#d9c58f` | Whole film | |
 
 ## Facts verified against the service, and where they came from
@@ -40,10 +41,11 @@ Captions sit in a fixed top band (y 196–about 420 px), clear of the bottom pla
 - **Doctor's name.** «ډاکټر جلال الدین» comes from the repo how-it-works page, and "Dr. Jalaluddin" from the live Doctors sheet. No qualifications or specialty are shown because none was supplied as approved copy.
 - All chat data is illustrative: patient «عبدالرحمن», age ۵۲, Kandahar, and the message times are fictional.
 
-## Missing assets (placeholders in the film)
+## Missing or unverified assets
 
-1. **Official eTabeeb logo.** It is not in either repo or in Drive. The Drive "Official-logo.jpg" is the *Kozhak Specialist Clinic* logo, so I didn't use it. The staging brand config has an empty `logo_asset`, and `etabeeb.online` (which has `etabeeb-logo.png`) is blocked from this environment. Dashed «لوګو / LOGO placeholder» boxes appear in the chat avatar, on the prescription and on the end card. To swap it in, replace `.avatar-ph`, `.logo-ph-s` and `#endLogo` with an `<img>` of the approved file.
+1. ~~Official eTabeeb logo~~: **supplied and in use.** The logo spells the brand «ای طبیب» (with a space), and the captions now use that exact form.
 2. **Approved eTabeeb WhatsApp number or booking link.** None is verified. The staging config's `whatsapp_cta` is empty. Kozhak's 0333 2357055 belongs to a different brand. The `+93 700699337` in the Stitch HTML mock-ups appears to be design copy, not an approved number. The end card shows the CTA without a number. Supply one and add it under `#endWa`.
 3. **Pashto narration recording.** See `NARRATION.md`.
 4. **Licensed or authorised patient footage.** None exists, so the patient is an illustration, as the brief allows.
-5. **Authorised doctor video.** None exists in the repos. The Drive folder "Dr jalal uddin" has two `.mov` health-talk clips ("congo virus") that are not consultation footage, so I didn't use them. The film uses the photograph, presented as a profile picture.
+5. **Second supplied photo** (Dr. Jalaluddin outdoors, casual clothes, with a training-course badge): not used. He is the doctor, so he cannot stand in for the patient. The clinical white-coat headshot already covers the consultation and end card. Tell me if you want it used somewhere specific.
+6. **Authorised doctor video.** None exists in the repos. The Drive folder "Dr jalal uddin" has two `.mov` health-talk clips ("congo virus") that are not consultation footage, so I didn't use them. The film uses the photograph, presented as a profile picture.

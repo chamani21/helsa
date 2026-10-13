@@ -554,6 +554,8 @@
         display: flex; align-items: center; justify-content: center; text-align: center;
         font-size: 24px; line-height: 1.1; font-weight: 600; color: #fff; background: rgba(255,255,255,0.08);
       }
+      .avatar-logo { width: 92px; height: 92px; border-radius: 50%; flex: none; overflow: hidden; background: #fff; position: relative; }
+      .avatar-logo img { position: absolute; width: 160px; height: 160px; left: -35px; top: -17px; }
       .wa-name { display: flex; flex-direction: column; gap: 2px; }
       .wa-name b { font-family: var(--latin); font-size: 40px; font-weight: 700; letter-spacing: -0.01em; }
       .wa-name span { font-size: 26px; opacity: 0.85; }
@@ -629,6 +631,8 @@
       .rx-head { display: flex; align-items: center; justify-content: space-between; border-bottom: 4px solid var(--brand); padding-bottom: 18px; }
       .rx-brand { display: flex; align-items: center; gap: 16px; }
       .logo-ph-s { width: 96px; height: 96px; border-radius: 16px; border: 3px dashed #7d8b83; display: flex; align-items: center; justify-content: center; font-size: 18px; color: #5c6a62; text-align: center; line-height: 1.1; }
+      .logo-s { width: 96px; height: 96px; border-radius: 16px; overflow: hidden; position: relative; background: #fff; flex: none; }
+      .logo-s img { position: absolute; width: 167px; height: 167px; left: -37px; top: -17px; }
       .rx-brand b { font-family: var(--serif); font-size: 40px; color: var(--brand-deep); display: block; line-height: 1.3; }
       .rx-brand span { font-family: var(--latin); font-size: 24px; color: var(--muted); display: block; direction: ltr; text-align: right; }
       .rx-title { font-family: var(--serif); font-size: 44px; font-weight: 700; color: var(--brand-deep); }
@@ -674,19 +678,16 @@
       .tap { position: absolute; width: 120px; height: 120px; margin: -60px 0 0 -60px; border-radius: 50%; background: rgba(11, 90, 58, 0.28); border: 4px solid rgba(11, 90, 58, 0.55); opacity: 0; }
 
       /* End card */
-      #endcard { background: radial-gradient(110% 70% at 50% 35%, #0f6a46 0%, #0b5a3a 45%, #073d28 100%); }
-      .end-logo { position: absolute; top: 470px; left: 50%; width: 300px; height: 300px; margin-left: -150px; border-radius: 40px; border: 5px dashed rgba(255,255,255,0.75); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: #fff; text-align: center; }
-      .end-logo b { font-family: var(--latin); font-size: 30px; letter-spacing: 0.06em; }
-      .end-logo span { font-size: 24px; opacity: 0.85; direction: rtl; line-height: 1.4; padding: 0 20px; }
-      .end-word { position: absolute; top: 800px; left: 0; right: 0; text-align: center; color: #fff; }
-      .end-word b { display: block; font-family: var(--latin); font-size: 84px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
-      .end-word span { display: block; font-family: var(--serif); font-size: 60px; color: var(--gold-soft); line-height: 1.5; }
-      .end-doc { position: absolute; top: 1040px; left: 120px; right: 120px; height: 250px; display: flex; align-items: center; gap: 34px; direction: rtl; background: rgba(255,255,255,0.08); border-radius: 36px; padding: 0 30px; }
-      .end-photo { width: 200px; height: 200px; border-radius: 30px; overflow: hidden; flex: none; border: 4px solid rgba(255,255,255,0.25); }
-      .end-doc b { display: block; font-family: var(--serif); font-size: 50px; color: #fff; line-height: 1.4; }
-      .end-doc span { display: block; font-family: var(--latin); font-size: 32px; color: #b9dccb; direction: ltr; text-align: right; }
-      .end-wa { position: absolute; top: 1330px; left: 50%; width: 520px; margin-left: -260px; height: 104px; border-radius: 52px; background: #fff; color: var(--brand-deep); display: flex; align-items: center; justify-content: center; gap: 18px; font-size: 40px; font-weight: 700; direction: rtl; }
-      .end-disc { position: absolute; top: 1462px; left: 80px; right: 80px; text-align: center; color: #f5e6c4; font-size: 34px; direction: rtl; line-height: 1.5; }
+      #endcard { background: linear-gradient(180deg, #f4fbfb 0%, #e3f3f4 60%, #d4ebef 100%); }
+      #endcard .cap-band { background: rgba(23, 63, 122, 0.92); }
+      .end-logo { position: absolute; top: 440px; left: 50%; width: 600px; height: 560px; margin-left: -300px; border-radius: 48px; background: #fff; overflow: hidden; box-shadow: 0 18px 50px rgba(23, 63, 122, 0.14); }
+      .end-logo img { position: absolute; width: 735px; height: 735px; left: -66px; top: -82px; }
+      .end-doc { position: absolute; top: 1036px; left: 120px; right: 120px; height: 250px; display: flex; align-items: center; gap: 34px; direction: rtl; background: #fff; box-shadow: 0 10px 30px rgba(23,63,122,0.10); border-radius: 36px; padding: 0 30px; }
+      .end-photo { width: 200px; height: 200px; border-radius: 30px; overflow: hidden; flex: none; }
+      .end-doc b { display: block; font-family: var(--serif); font-size: 50px; color: #173f7a; line-height: 1.4; }
+      .end-doc span { display: block; font-family: var(--latin); font-size: 32px; color: #4a6a8a; direction: ltr; text-align: right; }
+      .end-wa { position: absolute; top: 1330px; left: 50%; width: 560px; margin-left: -280px; height: 104px; border-radius: 52px; background: linear-gradient(90deg, #1aa3a6, #1d5aa0); color: #fff; display: flex; align-items: center; justify-content: center; gap: 18px; font-size: 40px; font-weight: 700; direction: rtl; }
+      .end-disc { position: absolute; top: 1462px; left: 80px; right: 80px; text-align: center; color: #7a5a2a; font-size: 34px; direction: rtl; line-height: 1.5; }
     </style>
   </head>
   <body>
@@ -827,7 +828,7 @@
               </div>
               <div class="wa-head">
                 <svg class="wa-back" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <div class="avatar-ph">لوګو</div>
+                <div class="avatar-logo"><img src="assets/brand/etabeeb-logo-official.png" alt="eTabeeb logo" /></div>
                 <div class="wa-name"><b>eTabeeb</b><span>ای طبیب · طبي مشوره</span></div>
               </div>
               <div class="chat-view">
@@ -922,7 +923,7 @@
                 <div class="rx">
                   <div class="sample-band">نمونه · د ښودنې لپاره · ریښتینې نسخه نه ده</div>
                   <div class="rx-head" style="margin-top: 56px">
-                    <div class="rx-brand"><div class="logo-ph-s">لوګو</div><div><b>ای طبیب</b><span>eTabeeb</span></div></div>
+                    <div class="rx-brand"><div class="logo-s"><img src="assets/brand/etabeeb-logo-official.png" alt="eTabeeb logo" /></div><div><b>ای طبیب</b><span>eTabeeb</span></div></div>
                     <div class="rx-title">نسخه</div>
                   </div>
                   <div class="rx-rows">
@@ -1001,22 +1002,21 @@
 
       <!-- ================= END CARD (82–88) ================= -->
       <section id="endcard" class="clip" data-start="82" data-duration="6" data-track-index="5">
-        <div class="end-logo" id="endLogo"><b>LOGO</b><span>د ای طبیب رسمي لوګو دلته · placeholder</span></div>
-        <div class="end-word" id="endWord"><b>eTabeeb</b><span>ای طبیب</span></div>
+        <div class="end-logo" id="endLogo"><img src="assets/brand/etabeeb-logo-official.png" alt="eTabeeb — ای طبیب, Care Beyond Borders" /></div>
         <div class="end-doc" id="endDoc">
           <div class="end-photo"><img src="assets/doctor/dr-jalaluddin__headshot-white-coat-01.png" alt="Dr. Jalaluddin" /></div>
           <div><b>ډاکټر جلال الدین</b><span>Dr. Jalaluddin</span></div>
         </div>
         <div class="end-wa" id="endWa">
-          <svg width="52" height="52" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="#0b5a3a"/><path d="M8.5 11.5h7M8.5 8.5h5" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <svg width="52" height="52" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="#fff"/><path d="M8.5 11.5h7M8.5 8.5h5" stroke="#1d5aa0" stroke-width="1.8" stroke-linecap="round"/></svg>
           په واټساپ پیغام راولېږئ
         </div>
         <div class="end-disc" id="endDisc">دا خدمت د بیړنیو حالاتو لپاره نه دی.</div>
       </section>
 
       <!-- ================= CAPTIONS (= narration script, Pashto) ================= -->
-      <div id="c1" class="clip cap-band" data-start="0.6" data-duration="6" data-track-index="9">ډاکټر ته تګ درته ګران دی؟ له ای‌طبیب سره له خپل ځایه طبي مشوره ترلاسه کولی شئ.</div>
-      <div id="c2" class="clip cap-band" data-start="7.8" data-duration="5.6" data-track-index="9">په واټساپ کې ای‌طبیب ته پیغام واستوئ او خپل نوم ولیکئ.</div>
+      <div id="c1" class="clip cap-band" data-start="0.6" data-duration="6" data-track-index="9">ډاکټر ته تګ درته ګران دی؟ له ای طبیب سره له خپل ځایه طبي مشوره ترلاسه کولی شئ.</div>
+      <div id="c2" class="clip cap-band" data-start="7.8" data-duration="5.6" data-track-index="9">په واټساپ کې ای طبیب ته پیغام واستوئ او خپل نوم ولیکئ.</div>
       <div id="c3" class="clip cap-band" data-start="13.6" data-duration="5.8" data-track-index="9">ستاسو د مشورې غوښتنه ثبتېږي.</div>
       <div id="c4" class="clip cap-band" data-start="20.4" data-duration="5" data-track-index="9">اډمین ستاسو معلومات او د فیس ورکړه تاییدوي.</div>
       <div id="c5" class="clip cap-band" data-start="25.6" data-duration="8" data-track-index="9">بیا د مشورې وخت له ډاکټر سره برابرېږي او تاسو ته په همدې واټساپ کې خبر درکول کېږي.</div>
@@ -1026,7 +1026,7 @@
       <div id="c9" class="clip cap-band" data-start="57" data-duration="6.3" data-track-index="9">که پخواني راپورونه لرئ، هغه هم ورولېږئ.</div>
       <div id="c10" class="clip cap-band" data-start="66" data-duration="6.6" data-track-index="9">له مشورې وروسته، ډاکټر نسخه او لازمې لارښوونې چمتو کوي</div>
       <div id="c11" class="clip cap-band" data-start="72.8" data-duration="5.8" data-track-index="9">او په همدې واټساپ کې یې ترلاسه کوئ.</div>
-      <div id="c12" class="clip cap-band" data-start="80.2" data-duration="7.6" data-track-index="9">د مشورې لپاره ای‌طبیب ته په واټساپ کې پیغام واستوئ.</div>
+      <div id="c12" class="clip cap-band" data-start="80.2" data-duration="7.6" data-track-index="9">د مشورې لپاره ای طبیب ته په واټساپ کې پیغام واستوئ.</div>
 
       <!-- ================= AUDIO (music bed + restrained SFX; narration slots documented in NARRATION.md) ================= -->
       <audio id="aPad" src="assets/audio/pad.wav" data-start="0" data-duration="88" data-track-index="20" data-volume="1"></audio>
@@ -1151,7 +1151,6 @@
         tl.fromTo("#s7Illus", { scale: 1.08 }, { scale: 1.12, duration: 3.8, ease: "sine.inOut" }, 78.8);
         tl.fromTo("#endcard", { opacity: 0 }, { opacity: 1, duration: 0.7, ease: "sine.out" }, 82);
         tl.fromTo("#endLogo", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.6, ease: E }, 82.4);
-        tl.fromTo("#endWord", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 82.8);
         tl.fromTo("#endDoc", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 83.3);
         tl.fromTo("#endWa", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6, ease: E }, 83.8);
         tl.fromTo("#endDisc", { opacity: 0 }, { opacity: 1, duration: 0.6 }, 84.6);

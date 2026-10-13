@@ -8,20 +8,20 @@
 
 | # | Slot (s) | Max length | Pashto line (caption text) | Meaning |
 |---|---|---|---|---|
-| VO1 | 0.6 – 6.6 | 6.0 s | ډاکټر ته تګ درته ګران دی؟ له ای‌طبیب سره له خپل ځایه طبي مشوره ترلاسه کولی شئ. | Is travelling to a doctor difficult? With eTabeeb, you can get medical advice from where you are. |
-| VO2 | 7.8 – 19.4 | 11.6 s | په واټساپ کې ای‌طبیب ته پیغام واستوئ او خپل نوم ولیکئ. ستاسو د مشورې غوښتنه ثبتېږي. | Message eTabeeb on WhatsApp and write your name. Your consultation request is registered. |
+| VO1 | 0.6 – 6.6 | 6.0 s | ډاکټر ته تګ درته ګران دی؟ له ای طبیب سره له خپل ځایه طبي مشوره ترلاسه کولی شئ. | Is travelling to a doctor difficult? With eTabeeb, you can get medical advice from where you are. |
+| VO2 | 7.8 – 19.4 | 11.6 s | په واټساپ کې ای طبیب ته پیغام واستوئ او خپل نوم ولیکئ. ستاسو د مشورې غوښتنه ثبتېږي. | Message eTabeeb on WhatsApp and write your name. Your consultation request is registered. |
 | VO3 | 20.4 – 33.6 | 13.2 s | اډمین ستاسو معلومات او د فیس ورکړه تاییدوي. بیا د مشورې وخت له ډاکټر سره برابرېږي او تاسو ته په همدې واټساپ کې خبر درکول کېږي. | The admin verifies your information and fee payment. The consultation time is then arranged with the doctor, and you are told in this same WhatsApp chat. |
 | VO4 | 35.4 – 47.4 | 12.0 s | په ټاکلي وخت د مشورې لینک خلاص کړئ. د انټرنېټ او موجودو امکاناتو له مخې، له ډاکټر سره غږیزه یا ویډیويي مشوره وکړئ. | At the set time, open the consultation link. Depending on your internet and what is available, have an audio or video consultation with the doctor. |
 | VO5 | 49.2 – 63.3 | 14.1 s | خپلې نښې، پخوانۍ ناروغۍ او کارېدونکي درمل له ډاکټر سره شریک کړئ. که پخواني راپورونه لرئ، هغه هم ورولېږئ. | Share your symptoms, past illnesses and current medicines with the doctor. If you have previous reports, send them too. |
 | VO6 | 66.0 – 78.6 | 12.6 s | له مشورې وروسته، ډاکټر نسخه او لازمې لارښوونې چمتو کوي او په همدې واټساپ کې یې ترلاسه کوئ. | After the consultation, the doctor prepares the prescription and necessary guidance, and you receive them in this same WhatsApp chat. |
-| VO7 | 80.2 – 87.6 | 7.4 s | د مشورې لپاره ای‌طبیب ته په واټساپ کې پیغام واستوئ. دا خدمت د بیړنیو حالاتو لپاره نه دی. | For a consultation, message eTabeeb on WhatsApp. This service is not for emergencies. |
+| VO7 | 80.2 – 87.6 | 7.4 s | د مشورې لپاره ای طبیب ته په واټساپ کې پیغام واستوئ. دا خدمت د بیړنیو حالاتو لپاره نه دی. | For a consultation, message eTabeeb on WhatsApp. This service is not for emergencies. |
 
 ## Language review (changes from the supplied script)
 
 - **VO1:** «ګران دي» → **«ګران دی»**. «تګ» is masculine singular, so the standard copula is «دی». Please have a native reviewer confirm. If your house style writes «دي», change caption `#c1` back.
 - **VO7:** Ends with «نه دی» (masc. sg., agreeing with «خدمت»). This matches the supplied text.
 - All other lines are unchanged. No medical promises, response times, fees or outcomes were added.
-- The brand is written **ای‌طبیب** (with a zero-width non-joiner) in the narration, as supplied. The app README and the live page title use **ای طبیب** (with a space), and that form appears in the interface mock-ups. The staging brand config has a different draft spelling («اي ټبیب»), which I treated as unapproved. **Please confirm the official Pashto spelling against the approved logo.**
+- The brand is written **ای طبیب**, exactly as on the official logo, in both captions and narration.
 
 ## Adding the recording
 

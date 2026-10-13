@@ -49,3 +49,17 @@ Captions sit in a fixed top band (y 196–about 420 px), clear of the bottom pla
 4. **Licensed or authorised patient footage.** None exists, so the patient is an illustration, as the brief allows.
 5. **Second supplied photo** (Dr. Jalaluddin outdoors, casual clothes, with a training-course badge): not used. He is the doctor, so he cannot stand in for the patient. The clinical white-coat headshot already covers the consultation and end card. Tell me if you want it used somewhere specific.
 6. **Authorised doctor video.** None exists in the repos. The Drive folder "Dr jalal uddin" has two `.mov` health-talk clips ("congo virus") that are not consultation footage, so I didn't use them. The film uses the photograph, presented as a profile picture.
+
+## Output verification (final render, measured with ffprobe/ffmpeg)
+
+| File | Check | Result |
+|---|---|---|
+| `renders/etabeeb-patient-journey-ps-9x16.mp4` | Video | H.264 High, 1080 × 1920, yuv420p, 30/1 fps CFR, 2640 frames |
+| | Audio | AAC-LC, 48 kHz stereo, 192 kb/s |
+| | Duration / size | 88.000 s / 19.2 MB (about 1.75 Mb/s) |
+| | Loudness | −29.8 LUFS integrated, LRA 2.4 LU. Music and SFX only, deliberately low so the Pashto voiceover can sit around −16 LUFS on top. |
+| | Full decode | Clean, with no errors |
+| `renders/etabeeb-preview.mp4` | Representative preview cut from the final | 35.5 s: booking 7–20 s, doctor connection 45.5–58 s, prescription 66–76 s |
+| `renders/etabeeb-patient-journey-thumbnail.jpg` | 1080 × 1920 still at 59.0 s | Consultation scene: Dr. Jalaluddin's photo, the patient tile and all four chips |
+
+`npx hyperframes check`: passed, 0 errors. The remaining warnings are crossfade overlaps, the deliberately cropped phone, and suggestions to split into sub-compositions.

@@ -16,7 +16,7 @@ Built with HyperFrames 0.8.153 (`index.html`). The draft cut was made with the s
 | 46.6 – 64.6 | Speaking with the doctor (key scene) | Dr. Jalaluddin's supplied photo, unmodified, shown as his **profile picture** in an audio-consultation interface. It carries the label «پروفایل انځور». The illustrated patient appears in a small «تاسو» tile. Chips: نښې, پخوانۍ ناروغۍ, کارېدونکي درمل, پخواني راپورونه. | Push-in 1.0 → 1.06. Connect chime. Only the level bars move; the photo itself never animates. |
 | 64.6 – 79.4 | Prescription | Back to the same chat: «ستاسو نسخه چمتو ده.» plus an **image** attachment «نسخه · انځور (نمونه)». A tap opens the image viewer with a sample prescription: «نمونه» banner and watermark, no patient data, no medicines or doses. | Hold about 8 s with a slow 1.0 → 1.04 push. |
 | 78.8 – 82.6 | Calm review | Same patient, calm, looking at his phone. No claims of recovery. | Soft drift. |
-| 82 – 88 | End card | Official eTabeeb logo (full lockup on a white card), Dr. Jalaluddin's photo and name, «په واټساپ پیغام راولېږئ», «دا خدمت د بیړنیو حالاتو لپاره نه دی.» **No phone number or URL is shown** because none is verified for eTabeeb. | Staggered fade-up. Pad fades out. |
+| 82 – 88 | End card | Official eTabeeb logo (full lockup on a white card), Dr. Jalaluddin's photo and name, «په واټساپ پیغام راولېږئ», «دا خدمت د بیړنیو حالاتو لپاره نه دی.» WhatsApp number `+92 310 0006526` (supplied by the user). No URL is shown. | Staggered fade-up. Pad fades out. |
 
 Captions sit in a fixed top band (y 196–about 420 px), clear of the bottom platform controls. The persistent tag «د ښودنې لپاره نمونه · خیالي معلومات» marks every mock-up as an illustrative demonstration.
 
@@ -44,7 +44,7 @@ Captions sit in a fixed top band (y 196–about 420 px), clear of the bottom pla
 ## Missing or unverified assets
 
 1. ~~Official eTabeeb logo~~: **supplied and in use.** The logo spells the brand «ای طبیب» (with a space), and the captions now use that exact form.
-2. **Approved eTabeeb WhatsApp number or booking link.** None is verified. The staging config's `whatsapp_cta` is empty. Kozhak's 0333 2357055 belongs to a different brand. The `+93 700699337` in the Stitch HTML mock-ups appears to be design copy, not an approved number. The end card shows the CTA without a number. Supply one and add it under `#endWa`.
+2. ~~eTabeeb WhatsApp number~~: **supplied by the user: 00 92 310 0006526.** It is shown on the end card as `+92 310 0006526` (international format, left to right). The chat mock-up still shows only the account name «eTabeeb», as WhatsApp does for a saved business contact.
 3. **Pashto narration recording.** See `NARRATION.md`.
 4. **Licensed or authorised patient footage.** None exists, so the patient is an illustration, as the brief allows.
 5. **Second supplied photo** (Dr. Jalaluddin outdoors, casual clothes, with a training-course badge): not used. He is the doctor, so he cannot stand in for the patient. The clinical white-coat headshot already covers the consultation and end card. Tell me if you want it used somewhere specific.
